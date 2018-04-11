@@ -1,0 +1,12 @@
+{
+    "name": "pm2test",
+    "version": "1.0.0",
+    "private": true,
+    "description": "適当にwatchしてビルドしてみる",
+    "scripts": {
+        "start": "chokidar /pm2/app/app.js -p -c 'cd /pm2/app; npm run build;'"
+    },
+    "devDependencies": {
+        "chokidar-cli": "^1.2.0"
+    }
+}

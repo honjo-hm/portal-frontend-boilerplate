@@ -1,9 +1,12 @@
 /**
  * ListEntity class file.
  * 
+ * @package Entities
+ * 
  * @since 2018.XX.XX
  * @copyright mediba.inc
  */
+import "reflect-metadata";
 import {Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn} from "typeorm";
 import AbstractEntity from "./AbstractEntity";
 

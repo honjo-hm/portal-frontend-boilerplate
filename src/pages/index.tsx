@@ -1,15 +1,11 @@
-import "reflect-metadata";
-import {Connection} from "typeorm";
-import {ListEntity} from "../shared/entities/ListEntity";
-import Connector from "../shared/entities/Connector";
+/**
+ * Index Page
+ * 
+ * @package Page
+ * @since 2018.XX.XX
+ * @copyright mediba.inc
+ */
+import IndexTemplate from "../shared/components/templates/IndexTemplate";
 
-Connector.connect([ListEntity]).then((connect: Connection) => {
-    const res = connect.getRepository(ListEntity).findOneById(1);
-    console.log(res);
-})
-
-
-export default () => (
-    <h1>hoge</h1>
-);
-
+// loadするだけ
+export default IndexTemplate;

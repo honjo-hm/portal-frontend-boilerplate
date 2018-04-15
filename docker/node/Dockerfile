@@ -1,4 +1,1 @@
-FROM node:6.13.1-onbuild
-
-# なんかコレ入れないとchokidarがコケる...
-ENV SHELL=/bin/bash
+FROM node:8.9.0-alpine

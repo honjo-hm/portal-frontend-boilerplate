@@ -1,46 +1,45 @@
 #
-# ローカル開発環境
+# ローカル開発環境（超シンプル構成）
 #
-version: '3'
+version: '2'
 services:
-      
-  pm2:
-    build: ./docker/pm2
-    container_name: portal_pm2_container
-    depends_on:
-      - node
-    volumes:
-      - .:/pm2
-
-  # watch用のコンテナ
+  
   node:
     build: ./docker/node
     container_name: portal_node_container
-    depends_on:
-      - mysql
+    hostname: node
+    volumes:
+      - "./src:/var/www/sample"
+    working_dir: /var/www/sample
+    command: [sh, -c, npm install && npm run local]
     links:
       - mysql:mysql
-    tty: true
-    volumes:
-      - .:/pm2
+    ports:
+      - "3000:3000"
+      - "3001:3001"
 
   nginx:
     build: ./docker/nginx
     container_name: portal_nginx_container
-    depends_on:
-      - pm2
     ports:
-      - 80:80
+      - "80:80"
+    depends_on:
+      - "node"
     volumes:
-      - .:/pm2
+      - "./docker/nginx/conf.d:/etc/nginx/conf.d"
+      - "./docker/nginx/logs:/var/log/nginx"
+    links:
+      - mysql:mysql
+      - node
 
   mysql:
     build: ./docker/mysql
     container_name: portal_mysql_container
+    restart: always
     ports:
-      - 3308:3306
+      - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: mysql123
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: portal
       MYSQL_USER: portal_user
       MYSQL_PASSWORD: portal_password

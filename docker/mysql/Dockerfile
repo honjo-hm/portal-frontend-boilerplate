@@ -1,4 +1,4 @@
-FROM mysql:5.6.34
+FROM mysql:5.7
 
 COPY config/my.cnf /etc/mysql/conf.d/my.cnf
 

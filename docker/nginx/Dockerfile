@@ -1,5 +1,2 @@
-FROM nginx:1.12.2-alpine
+FROM nginx
 
-RUN rm -f /etc/nginx/conf.d/default.conf
-
-COPY pm2.conf /etc/nginx/conf.d/pm2.conf

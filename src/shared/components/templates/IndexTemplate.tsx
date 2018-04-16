@@ -11,7 +11,7 @@ import "reflect-metadata";
 import * as React from "react";
 import {IndexProps} from "../../props/IndexProps";
 import {ListEntity} from "../../entities/ListEntity";
-import {getConnectionManager, ConnectionManager, Connection, getManager} from "typeorm";
+import {createConnection} from "typeorm";
 
 /**
  * IndexTemplate（Anonymus）
@@ -26,27 +26,21 @@ export default class extends React.Component<IndexProps, any> {
      * @returns Promise<IndexProps>
      */
     public static async getInitialProps(): Promise<IndexProps> {
-        const connectionManager: ConnectionManager = getConnectionManager();
 
-        const connection: Connection = connectionManager.create({
-            type: "mysql",
-            host: "localhost",
-            port: 3306,
-            username: "portal_user",
-            password: "portal_password",
-            database: "portal",
-            entities: [__dirname + "../../entities/*"]
-        });
-        connection.connect(); // performs connection
-        
-        const entityManager = getManager();
-        const entity = await entityManager.findOneById(ListEntity, 1);
+        let name = "gggg";
 
-        let name: string = "fuga";
-        if (entity instanceof ListEntity) {
-            name = entity.name;
+        try {
+            const connection = await createConnection();
+            const list: ListEntity | undefined = await connection.manager.findOneById(ListEntity, 1);
+
+            if (list !== undefined) {
+                name = list.name;
+            }
+
+        } catch (error) {
+            console.log(error);
         }
-        console.log(entity);
+
         return { name: name } as IndexProps;
     }
 

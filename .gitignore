@@ -6,3 +6,6 @@ built
 # docker周り
 docker/mysql/test
 docker/nginx/logs
+
+# nextjs
+src/.next

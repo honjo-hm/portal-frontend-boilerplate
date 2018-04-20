@@ -14,6 +14,7 @@ interface IndexProps {
     isServer: boolean,
     addArticle: () => {},
     articles: Article[],
+    name: any
 }
 
 class IndexComponent extends React.Component<IndexProps> {
@@ -44,7 +45,7 @@ class IndexComponent extends React.Component<IndexProps> {
         const props: IndexProps = this.props;
         return (
             <Layout {...props}>
-                <h1>Article List -- name</h1>
+                <h1>Article List -- {props.name}</h1>
                 <button onClick={() => {props.addArticle()}}>Add Article</button>
                 <ul>
                     {Object.keys(props.articles).map((key: any) => {

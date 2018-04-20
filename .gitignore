@@ -69,3 +69,7 @@ jspm_packages/
 
 # dotenv environment variables file
 .env
+
+# docker
+docker/mysql/test
+docker/nginx/logs

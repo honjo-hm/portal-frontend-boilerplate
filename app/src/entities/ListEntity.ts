@@ -6,6 +6,7 @@
  * @since 2018.XX.XX
  * @copyright mediba.inc
  */
+import 'reflect-metadata'
 import {Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn} from "typeorm";
 import AbstractEntity from "./AbstractEntity";
 
@@ -16,7 +17,7 @@ import AbstractEntity from "./AbstractEntity";
  *
  * @author hoge(hoge@mediba.jp)
  */
-@Entity("list")
+@Entity('list')
 export class ListEntity extends AbstractEntity {
 
     /**

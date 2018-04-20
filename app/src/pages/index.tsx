@@ -1,3 +1,4 @@
+import 'reflect-metadata'
 import React from 'react'
 import { bindActionCreators } from 'redux'
 import withRedux from '../utils/withRedux'
@@ -25,7 +26,11 @@ class IndexComponent extends React.Component<IndexProps> {
         try {
             const connection = await createConnection();
             const list: ListEntity | undefined = await connection.manager.findOne(ListEntity, 1);
+            // const list: ListEntity | undefined = await connection.manager.find(ListEntity);
+            // const list: ListEntity | undefined = await connection.manager.findOne(1);
             // const list: ListEntity | undefined = await connection.manager.findByIds(ListEntity, [1]);
+
+            console.log('------------ list:\n', list)
 
             if (list !== undefined) {
                 name = list.name;

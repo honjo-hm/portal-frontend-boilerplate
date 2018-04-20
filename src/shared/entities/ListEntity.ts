@@ -35,7 +35,7 @@ export class ListEntity extends AbstractEntity {
      * @var string url url
      */
     @Column()
-    url!: string;
+    image_url!: string;
 
     /**
      * @var Date created_date 作成日
@@ -52,6 +52,6 @@ export class ListEntity extends AbstractEntity {
     /**
      * @var Date deleted_date 削除日
      */
-    @Column()
+    @Column("date")
     deleted_date!: Date;
 }

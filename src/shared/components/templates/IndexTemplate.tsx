@@ -32,7 +32,7 @@ export default class extends React.Component<IndexProps, any> {
 
         try {
             const connection = await createConnection(ormConfig);
-            const list: ListEntity | undefined = await connection.manager.findOneById(ListEntity, 1);
+            const list: ListEntity | undefined = await connection.manager.findOne<ListEntity>(ListEntity);
 
             if (list !== undefined) {
                 name = list.name;

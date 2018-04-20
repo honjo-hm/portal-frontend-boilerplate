@@ -8,6 +8,6 @@
    "synchronize": false,
    "logging": false,
    "entities": [
-      "shared/entities/*Entity.ts"
+      "shared/entities/ListEntity.ts"
    ]
 }

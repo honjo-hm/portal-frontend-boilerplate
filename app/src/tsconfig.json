@@ -1,0 +1,39 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "preserve",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "strict": true,
+    // "alwaysStrict": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "typeRoots": [
+      "../node_modules/@types"
+    ],
+    "lib": [
+      "dom",
+      "es2015",
+      "es2016"
+    ],
+    "experimentalDecorators": true,      /* Enables experimental support for ES7 decorators. */
+    "emitDecoratorMetadata": true         /* Enables experimental support for emitting type metadata for decorators. */
+  },
+  "include": [
+    "../definition",
+    "**/*"
+  ],
+  "exclude": [
+    ".next",
+    "../node_modules",
+    "../node_modules/next-routes/typings/tests"
+  ]
+}

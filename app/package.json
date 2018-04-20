@@ -1,0 +1,40 @@
+{
+  "name": "frontend-boilerplate",
+  "version": "0.0.1",
+  "description": "frontend-boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrkhnj/portal-frontend-boilerplate.git"
+  },
+  "author": "honjo hiroki",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/next": "^2.4.9",
+    "@types/react": "^16.3.10",
+    "@types/react-redux": "^5.0.16",
+    "@zeit/next-typescript": "^0.1.1",
+    "fork-ts-checker-webpack-plugin": "^0.4.1",
+    "fs": "0.0.1-security",
+    "next": "^5.1.0",
+    "next-routes": "^1.4.1",
+    "nextjs-dynamic-routes": "^2.1.7",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-redux": "^5.0.7",
+    "tslint": "^5.9.1",
+    "tslint-react": "^3.5.1",
+    "typescript": "^2.8.1"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "mysql": "^2.15.0",
+    "net": "^1.0.2",
+    "tls": "^0.0.1",
+    "typeorm": "^0.2.0"
+  }
+}

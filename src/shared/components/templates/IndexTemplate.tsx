@@ -9,6 +9,7 @@
  */
 import "reflect-metadata";
 import * as React from "react";
+import ormConfig from "../../../ormconfig";
 import {IndexProps} from "../../props/IndexProps";
 import {ListEntity} from "../../entities/ListEntity";
 import {createConnection} from "typeorm";
@@ -30,7 +31,7 @@ export default class extends React.Component<IndexProps, any> {
         let name = "gggg";
 
         try {
-            const connection = await createConnection();
+            const connection = await createConnection(ormConfig);
             const list: ListEntity | undefined = await connection.manager.findOneById(ListEntity, 1);
 
             if (list !== undefined) {

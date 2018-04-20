@@ -23,8 +23,8 @@ class IndexComponent extends React.Component<IndexProps> {
 
         try {
             const connection = await createConnection();
+            const list: ListEntity | undefined = await connection.manager.findOne(ListEntity, 1);
             // const list: ListEntity | undefined = await connection.manager.findByIds(ListEntity, [1]);
-            const list: ListEntity | undefined = await connection.manager.findByIds(ListEntity, [1]);
 
             if (list !== undefined) {
                 name = list.name;

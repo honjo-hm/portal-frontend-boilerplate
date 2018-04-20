@@ -1,9 +1,9 @@
 /**
  * Index Template
  * Container Component
- * 
+ *
  * @package Components
- * 
+ *
  * @since 2018.XX.XX
  * @copyright mediba.inc
  */
@@ -15,14 +15,14 @@ import {createConnection} from "typeorm";
 
 /**
  * IndexTemplate（Anonymus）
- * 
+ *
  * @author hoge(hoge@mediba.jp)
  */
 export default class extends React.Component<IndexProps, any> {
 
     /**
      * 初期状態のpropsを返す（nextjs規約）
-     * 
+     *
      * @returns Promise<IndexProps>
      */
     public static async getInitialProps(): Promise<IndexProps> {
@@ -46,7 +46,7 @@ export default class extends React.Component<IndexProps, any> {
 
     /**
      * renderする
-     * 
+     *
      * @returns React.ReactNode
      */
     public render(): React.ReactNode {

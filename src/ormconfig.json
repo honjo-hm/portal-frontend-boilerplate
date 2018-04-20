@@ -1,13 +1,13 @@
 {
    "type": "mysql",
-   "host": "172.18.0.2",
+   "host": "mysql",
    "port": 3306,
    "username": "portal_user",
    "password": "portal_password",
    "database": "portal",
    "synchronize": false,
-   "logging": true,
+   "logging": false,
    "entities": [
-      "shared/entities/**/*Entity.ts"
+      "shared/entities/*Entity.ts"
    ]
 }

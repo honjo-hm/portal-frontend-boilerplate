@@ -3,7 +3,7 @@
 #
 version: '2'
 services:
-  
+
   node:
     build: ./docker/node
     container_name: portal_node_container
@@ -29,13 +29,12 @@ services:
       - "./docker/nginx/conf.d:/etc/nginx/conf.d"
       - "./docker/nginx/logs:/var/log/nginx"
     links:
-      - mysql:mysql
+      - mysql
       - node
 
   mysql:
     build: ./docker/mysql
     container_name: portal_mysql_container
-    hostname: container_mysql
     restart: always
     ports:
       - 3306:3306

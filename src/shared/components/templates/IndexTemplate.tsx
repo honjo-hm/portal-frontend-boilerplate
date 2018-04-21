@@ -37,6 +37,7 @@ export default class extends React.Component<IndexProps, any> {
             if (list !== undefined) {
                 name = list.name;
             }
+            connection.close()
 
         } catch (error) {
             console.log(error);

@@ -1,3 +1,4 @@
+require("reflect-metadata");
 const path = require('path');
 const withTypescript = require('@zeit/next-typescript')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');

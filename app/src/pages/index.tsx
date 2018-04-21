@@ -8,6 +8,7 @@ import Layout from '../components/Layout'
 import routes from '../routes'
 import {ListEntity} from '../entities/ListEntity'
 import {createConnection} from 'typeorm'
+import ormConfig from '../ormconfig';
 
 const { Link } = routes
 
@@ -18,19 +19,43 @@ interface IndexProps {
     name: any
 }
 
+let manager: any;
+
+createConnection(ormConfig).then(async connection => {
+    manager = connection.manager
+    // const aaaa = manager.findOne(1);
+    // const first: ListEntity | undefined = await connection.manager.findOne(ListEntity, 1);
+    const first: ListEntity | undefined =
+                await connection.getRepository(ListEntity).findOne({ name: 'ample1' })
+    connection.close()
+})
+
 class IndexComponent extends React.Component<IndexProps> {
     // tslint:disable-next-line: no-shadowed-variable
     public static async getInitialProps({store, isServer, addArticle}: ContextObject) {
         let name = 'gggg';
 
+        // createConnection(connectionConfig).then(async connection => {
+        //     manager = connection.manager
+        //     // const aaaa = manager.findOne(1);
+        //     // const first: ListEntity | undefined = await connection.manager.findOne(ListEntity, 1);
+        //     const first: ListEntity | undefined =
+        //         await connection.getRepository(ListEntity).findOne({ name: "sample1" })
+        //     console.log('------------ list:\n', first.name)
+        // }).catch(error => console.log("TypeORM connection error: ", error));
+
+        if (manager) {
+            // const aaaa = await manager.find(ListEntity);
+            // console.log('------------ vbngggg9999:\n', aaaa)
+        }
         try {
-            const connection = await createConnection();
-            const list: ListEntity | undefined = await connection.manager.findOne(ListEntity, 1);
+            let list
+            // const connection = await createConnection();
+            // connection = connection || await createConnection()
+            // const list: ListEntity | undefined = await connection.manager.findOne(ListEntity, 1);
             // const list: ListEntity | undefined = await connection.manager.find(ListEntity);
             // const list: ListEntity | undefined = await connection.manager.findOne(1);
             // const list: ListEntity | undefined = await connection.manager.findByIds(ListEntity, [1]);
-
-            console.log('------------ list:\n', list)
 
             if (list !== undefined) {
                 name = list.name;

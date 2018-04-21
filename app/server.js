@@ -2,6 +2,7 @@
 // import next from 'next'
 // import routes from './src/routes'
 // import {createServer} from 'http'
+// require("reflect-metadata");
 const next = require('next')
 const routes = require('./src/routes')
 const {createServer} = require('http')

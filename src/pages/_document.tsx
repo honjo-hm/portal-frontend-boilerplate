@@ -8,20 +8,15 @@
 import React from "react";
 import Document, { Head, Main, NextScript } from "next/document"
 import styled, { ServerStyleSheet, injectGlobal } from "styled-components"
+import reset from "styled-reset";
 
 injectGlobal`
-  html {
-    font-size: 10px;
-  }
-  body {
-    font-size: 1.6em;
-    line-height: 1.6;
-  }
+    ${reset}
 `;
 
 /**
  * style footer
- * 
+ *
  * @author hoge(hoge@mediba.jp)
  */
 const Footer = styled.footer`
@@ -35,7 +30,7 @@ const Footer = styled.footer`
 
 /**
  * style address
- * 
+ *
  * @author hoge(hoge@mediba.jp)
  */
 const Address = styled.address`
@@ -46,16 +41,16 @@ const Address = styled.address`
 
 /**
  * SiteDocument
- * 
+ *
  * @author hoge(hoge@mediba.jp)
  */
 export default class SiteDocument extends Document {
 
     /**
      * 写経 from https://bilalbudhani.com/using-next-js-with-styled-components/
-     * 
+     *
      * @param renderPage renderPage
-     * 
+     *
      * @returns {}
      */
     static getInitialProps ({ renderPage }): {} {
@@ -68,7 +63,7 @@ export default class SiteDocument extends Document {
 
     /**
      * render
-     * 
+     *
      * @returns ReactNode
      */
     public render(): React.ReactNode {

@@ -10,10 +10,11 @@ import styled from "styled-components";
 
 //@ts-ignore
 import { Link } from "../shared/routes/index";
+import News from "../shared/components/widgets/News";
 
 /**
  * 以下ちゃんとlibraryとして切り出す
- * 
+ *
 import { GraphQLClient } from "graphql-request";
 
 const client = new GraphQLClient("https://local.api.universal.auone.jp/graphql", {
@@ -43,10 +44,15 @@ client.request(query).then((data) => {
 
 export default () => (
     <div>
-        <h2>Hello Index</h2>
-        <ul>
-            <Link route="settings"><a>settings</a></Link>
-        </ul>
+        <div>
+            <h2>Hello Index</h2>
+            <ul>
+                <Link route="settings"><a>settings</a></Link>
+            </ul>
+        </div>
+        <div>
+            <News />
+        </div>
     </div>
 )
 

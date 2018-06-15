@@ -20,7 +20,7 @@ const Items = styled.ul`
 export const TabList = (props) => (
     <Items>
         {props.tabs.map((tab) => (
-            <Tab key={`Tab${tab.id}`} tab={tab}>{tab.name}</Tab>
+            <Tab key={`Tab${tab.id}`} tab={tab} onClick={props.onClick}>{tab.name}</Tab>
         ))}
     </Items>
 );

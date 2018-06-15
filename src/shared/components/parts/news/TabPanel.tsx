@@ -6,7 +6,7 @@ const Item = styled.div`
 `;
 
 export const TabPanel = (props) => (
-    <Item>
+    <Item hidden={!props.tab.active}>
         {props.tab.name}
     </Item>
 );

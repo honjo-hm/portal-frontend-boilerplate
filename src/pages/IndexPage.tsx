@@ -11,6 +11,8 @@ import styled from "styled-components";
 //@ts-ignore
 import { Link } from "../shared/routes/index";
 import IndexTemplate from "../shared/components/templates/IndexTemplate";
+import Dailytool from "../shared/components/widgets/Dailytool";
+
 
 /**
  * 以下ちゃんとlibraryとして切り出す
@@ -47,7 +49,8 @@ export default () => (
         <ul>
             <Link route="settingServices"><a>settings</a></Link>
         </ul>
+        <div>
+            <Dailytool />
+        </div>
     </div>
 )
-
-

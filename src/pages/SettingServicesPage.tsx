@@ -1,5 +1,5 @@
 /**
- * Setting Page
+ * SettingServices Page
  *
  * @package Page
  * @since 2018.XX.XX
@@ -8,7 +8,6 @@
 
 import SettingServicesTemplate from "../shared/components/templates/SettingServicesTemplate";
 import { injectGlobal } from "styled-components";
-
 
 /**
  * style

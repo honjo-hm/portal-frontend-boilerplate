@@ -23,6 +23,12 @@ router
     pattern: "/settings",
     page: "/SettingsPage"
 })
+// 個人設定ページ
+.add({
+    name: "settingServices",
+    pattern: "/setting/services",
+    page: "/SettingServicesPage"
+})
 // 記事詳細ページ
 .add({
     name: "detail",

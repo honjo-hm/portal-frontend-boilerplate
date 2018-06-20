@@ -1,5 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
+import { Weather } from "./Weather";
+import { Fortune } from "./Fortune";
 
 const Item = styled.li`
     list-style-type: none;
@@ -26,17 +28,19 @@ const Personal = styled.div`
     -webkit-box-align: center;
     -webkit-box-flex: 1;
 `;
-const Img = styled.img`
-`;
-const Maxtemp = styled.span`
+
+const ToolImg = styled.i`
     display: block;
-    color: #ef3743;
-    font-weight: 700;
-`;
-const Mintemp = styled.span`
-    display: block;
-    color: #0574eb;
-    font-weight: 700;
+    background-image: url("//dev-capybara1.kdev.auone.jp/emu/dist/img/sprite-lifetools.png?cc=unixtime");
+    background-size: 78px 65px;
+    background-position: -59px 0;
+    width: 19px;
+    height: 27px;
+    &[data-tool-id="4"] {
+        background-position: 0 -42px;
+        width: 22px;
+        height: 23px;
+    }
 `;
 const Text = styled.p`
     padding-bottom: 4px;
@@ -47,14 +51,13 @@ export const Tool = (props) => (
   <Item>
       <Link href={props.tool.link} data-ga-action="Daily" data-ga-label={props.tool.name}>
           <Personal>
-                  <Img src={props.tool.icon} width="30" height="20"/>
               {(() => {
-                  if (props.tool.maxtemp && props.tool.mintemp) {
-                    return <p>
-                        <Maxtemp>{props.tool.maxtemp}</Maxtemp>
-                        <Mintemp>{props.tool.mintemp}</Mintemp>
-                    </p>;
+                  if (props.tool.id === 1) {
+                      return <Weather tool={props.tool} />;
+                  } else if (props.tool.id === 2) {
+                      return <Fortune tool={props.tool} />;
                   }
+                  return <ToolImg data-tool-id={props.tool.id}/>;
               })()}
           </Personal>
           <Text>{props.tool.text}</Text>

@@ -7,30 +7,30 @@ const tools = [
         id: 1,
         name: '天気',
         link: '//tenki.auone.jp/weather/01101?rf=au_top',
-        icon: '//kimg.auone.jp/emu/dist/img/weather/100.png',
+        icon: '//dev-capybara1.kdev.auone.jp/emu/dist/img/weather/300.png',
         text: '千代田区',
         maxtemp: '25℃',
-        mintemp: '20℃'
+        mintemp: '20℃',
+        alert: 1
     },
     {
         id: 2,
         name: '占い',
         link: '//sp.fortune.auone.jp/astro/ranking',
-        icon: '//kimg.auone.jp/emu/dist/img/weather/200.png',
-        text: 'みずがめ座'
+        text: 'やぎ座',
+        rank: 1,
+        astro_code: 1
     },
     {
         id: 3,
         name: '乗換・地図',
         link: '//touch.eznavi.auone.jp/transfer/',
-        icon: '//kimg.auone.jp/emu/dist/img/weather/300.png',
         text: '乗換・地図'
     },
     {
         id: 4,
         name: 'auサポート',
         link: '//www.au.com/support/?aid=cs-cs-support-0001',
-        icon: '//kimg.auone.jp/emu/dist/img/weather/400.png',
         text: 'auサポート'
     }
 ];

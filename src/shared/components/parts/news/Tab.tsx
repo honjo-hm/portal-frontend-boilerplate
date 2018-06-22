@@ -1,6 +1,20 @@
 import React from "react";
 import styled from "styled-components"
 
+export const Tab = (props) => (
+    <Item data-tab-id={props.tab.id} data-ga-label={props.tab.name} onClick={props.onClick} data-selected={props.tab.active}>
+        {props.tab.name}
+    </Item>
+);
+
+export const TabList = (props) => (
+    <Items>
+        {props.tabs.map((tab) => (
+            <Tab key={`Tab${tab.id}`} tab={tab} onClick={props.onClick}>{tab.name}</Tab>
+        ))}
+    </Items>
+);
+
 const Item = styled.li`
     flex: 1;
     margin: 0;
@@ -13,8 +27,21 @@ const Item = styled.li`
     }
 `;
 
-export const Tab = (props) => (
-    <Item data-tab-id={props.tab.id} data-ga-label={props.tab.name} onClick={props.onClick} data-selected={props.tab.active}>
-        {props.tab.name}
-    </Item>
-);
+const Items = styled.ul`
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f6f6f6;
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+    border-bottom: 1px solid #eb5505;
+    ::before {
+        height: 1px;
+        background-color: #e9e9e9;
+        content: '';
+    }
+`;

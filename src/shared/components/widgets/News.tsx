@@ -94,7 +94,7 @@ export default class News extends React.Component<{}, NewsTabsStates> {
             if (tabIndex !== undefined) {
                 tab.active = tabIndex === index;
             } else {
-                tab.active = tab.id === parseInt(e.target.dataset.tabId, 10);
+                tab.active = tab.id === parseInt(e.currentTarget.dataset.tabId, 10);
             }
             return tab;
         });

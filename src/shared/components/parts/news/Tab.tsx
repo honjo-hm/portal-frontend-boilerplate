@@ -23,6 +23,7 @@ const Item = styled.li`
     min-height: 44px;
     line-height: 44px;
     &[data-selected='true'] {
+        font-weight: bold;
         background-color: #eb5505;
         color: #fff;
     }
@@ -54,5 +55,5 @@ const Items = styled.ul`
     font-size: 12px;
     text-align: center;
     white-space: nowrap;
-    border-bottom: 1px solid #eb5505;
+    border-bottom: 2px solid #eb5505;
 `;

@@ -16,6 +16,7 @@ export const TabList = (props) => (
 );
 
 const Item = styled.li`
+    position: relative;
     flex: 1;
     margin: 0;
     padding: 0 5px;
@@ -24,6 +25,21 @@ const Item = styled.li`
     &[data-selected='true'] {
         background-color: #eb5505;
         color: #fff;
+    }
+    ::before {
+        content: '';
+        position: absolute;
+        left: 1px;
+        top: 0;
+        width: 1px;
+        height: 1.5rem;
+        margin-top: .75rem;
+        background-color: rgba(0, 0, 0, 0.05);
+        z-index: -1;
+    }
+    &:first-child::before,
+    &[data-selected='true'] + ::before {
+        opacity 0;
     }
 `;
 
@@ -39,9 +55,4 @@ const Items = styled.ul`
     text-align: center;
     white-space: nowrap;
     border-bottom: 1px solid #eb5505;
-    ::before {
-        height: 1px;
-        background-color: #e9e9e9;
-        content: '';
-    }
 `;

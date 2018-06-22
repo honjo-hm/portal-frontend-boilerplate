@@ -104,4 +104,5 @@ export default class News extends React.Component<{}, NewsTabsStates> {
 
 const Item = styled.section`
     margin-top: 10px;
+    border-top: 1px solid #e9e9e9;
 `;

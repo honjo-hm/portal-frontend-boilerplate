@@ -25,17 +25,6 @@ const NewsLink = styled.a`
     padding: 3px 0;
 `;
 
-// export const imageS = {
-//     width: "70px",
-//     height: "70px",
-// }
-
-//  const SubTitle = styled(Header)`
-//  &&& {
-//    color: palevioletred;
-//    margin-bottom: 3rem;
-//  }`;
-
 export default class NewsList extends React.Component {
 
     public render(): React.ReactNode {

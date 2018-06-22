@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components"
+import {Item} from "./Item"
 
-const Item = styled.div`
+
+const ItemStyle = styled.div`
     min-height: 500px;
 `;
 
 export const TabPanel = (props) => (
-    <Item hidden={!props.tab.active}>
+    <ItemStyle hidden={!props.tab.active}>
         {props.tab.name}
-    </Item>
+        <Item layout='small' roopCounts={props.roopCounts}/>
+    </ItemStyle>
 );

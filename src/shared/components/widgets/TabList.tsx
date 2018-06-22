@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components"
-import { Tab } from "./Tab";
+import { Tab } from "../parts/news/Tab";
 
 const Items = styled.ul`
     position: sticky;

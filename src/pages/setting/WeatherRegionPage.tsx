@@ -7,7 +7,7 @@
  */
 import "../../shared/style/setting/global";
 
-import RegionTemplate from "../../shared/components/templates/RegionTemplate";
+import RegionTemplate from "../../shared/components/templates/setting/RegionTemplate";
 
 // module
  export default () => (

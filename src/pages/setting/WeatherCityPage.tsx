@@ -7,7 +7,7 @@
  */
 import "../../shared/style/setting/global";
 
-import WeatherTemplate from "../../shared/components/templates/WeatherTemplate";
+import WeatherTemplate from "../../shared/components/templates/setting/WeatherTemplate";
 
 // module
  export default () => (

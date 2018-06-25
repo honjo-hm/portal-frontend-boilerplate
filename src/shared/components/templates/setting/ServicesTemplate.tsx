@@ -3,16 +3,16 @@
  */
 import React from "react";
 
-import { Setting } from "../../style/setting/common";
+import { Setting } from "../../../style/setting/common";
 
-import ServiceCommonWidget from "../widgets/setting/ServiceCommonWidget";
-import ServiceTrainWidget from "../widgets/setting/ServiceTrainWidget";
-import ServiceStaticWidget from "../widgets/setting/ServiceStaticWidget";
-import SettingDescriptionWidget from "../widgets/setting/SettingDescriptionWidget";
-import SubPageDrawerBottunWidget from "../widgets/setting/SubPageDrawerBottunWidget";
-import SubPageDrawerCoverWidget from "../widgets/setting/SubPageDrawerCoverWidget";
-import SubPageDrawerWidget from "../widgets/setting/SubPageDrawerWidget";
-import SubPageHeaderWidget from "../widgets/setting/SubPageHeaderWidget";
+import ServiceCommonWidget from "../../widgets/setting/ServiceCommonWidget";
+import ServiceTrainWidget from "../../widgets/setting/ServiceTrainWidget";
+import ServiceStaticWidget from "../../widgets/setting/ServiceStaticWidget";
+import SettingDescriptionWidget from "../../widgets/setting/SettingDescriptionWidget";
+import SubPageDrawerBottunWidget from "../../widgets/setting/SubPageDrawerBottunWidget";
+import SubPageDrawerCoverWidget from "../../widgets/setting/SubPageDrawerCoverWidget";
+import SubPageDrawerWidget from "../../widgets/setting/SubPageDrawerWidget";
+import SubPageHeaderWidget from "../../widgets/setting/SubPageHeaderWidget";
 
 /**
  * props

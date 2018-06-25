@@ -7,7 +7,7 @@
  */
 import "../../shared/style/setting/global";
 
-import ServicesTemplate from "../../shared/components/templates/ServicesTemplate";
+import ServicesTemplate from "../../shared/components/templates/setting/ServicesTemplate";
 
 // module
  export default () => (

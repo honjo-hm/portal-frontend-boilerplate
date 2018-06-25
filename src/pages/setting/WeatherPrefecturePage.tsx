@@ -7,7 +7,7 @@
  */
 import "../../shared/style/setting/global";
 
-import PrefectureTemplate from "../../shared/components/templates/PrefectureTemplate";
+import PrefectureTemplate from "../../shared/components/templates/setting/PrefectureTemplate";
 
 // module
 export default () => (

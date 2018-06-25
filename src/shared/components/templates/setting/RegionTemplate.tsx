@@ -3,14 +3,14 @@
  */
 import React from "react";
 
-import { Setting } from "../../style/setting/common";
+import { Setting } from "../../../style/setting/common";
 
-import AreaInfomationWidget from "../widgets/setting/AreaInfomationWidget";
-import RegionListWidget from "../widgets/setting/RegionListWidget";
-import SubPageDrawerBottunWidget from "../widgets/setting/SubPageDrawerBottunWidget";
-import SubPageDrawerCoverWidget from "../widgets/setting/SubPageDrawerCoverWidget";
-import SubPageDrawerWidget from "../widgets/setting/SubPageDrawerWidget";
-import SubPageHeaderWidget from "../widgets/setting/SubPageHeaderWidget";
+import AreaInfomationWidget from "../../widgets/setting/AreaInfomationWidget";
+import RegionListWidget from "../../widgets/setting/RegionListWidget";
+import SubPageDrawerBottunWidget from "../../widgets/setting/SubPageDrawerBottunWidget";
+import SubPageDrawerCoverWidget from "../../widgets/setting/SubPageDrawerCoverWidget";
+import SubPageDrawerWidget from "../../widgets/setting/SubPageDrawerWidget";
+import SubPageHeaderWidget from "../../widgets/setting/SubPageHeaderWidget";
 
 /**
  * props

@@ -7,8 +7,9 @@ import styled from 'styled-components'
 import { SettingBackBottunParts } from "../../parts/setting/SettingBackButtonParts";
 import { SettingLocationParts } from "../../parts/setting/SettingLocationParts";
 
-export interface SettingAreaInfomationProps {
+export interface AreaInfomationProps {
     route: string;
+    label: string;
 }
 
 /**
@@ -28,12 +29,12 @@ const SettingLeadCurrentText = styled.p`
 /**
  * module
  */
-export default class SettingAreaInfomationWidget extends React.Component<SettingAreaInfomationProps, {}> {
+export default class AreaInfomationWidget extends React.Component<AreaInfomationProps, {}> {
     public render(): React.ReactNode {
         return (
             <SettingLead>
                 <SettingBackBottunParts route={this.props.route} />
-                <p>現在設定されている地域</p>
+                <p>現在設定されている{this.props.label}}</p>
                 <SettingLeadCurrentText>未設定</SettingLeadCurrentText>
                 <SettingLocationParts />
             </SettingLead>

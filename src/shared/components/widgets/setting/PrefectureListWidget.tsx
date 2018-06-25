@@ -9,7 +9,7 @@ import { SettingAreaPartsA } from "../../parts/setting/SettingAreaPartsA";
 /**
  * props
  */
-export interface SettingPrefectureListProps {
+export interface PrefectureListProps {
     route: string;
     code: string
 }
@@ -56,7 +56,7 @@ const PREFECTURE = {
 /**
  * module
  */
-export default class SettingPrefectureListWidget extends React.Component<SettingPrefectureListProps, {}> {
+export default class PrefectureListWidget extends React.Component<PrefectureListProps, {}> {
     public render(): React.ReactNode {
         let regions = [
             {name: PREFECTURE["36"], code: "36"},

@@ -18,7 +18,7 @@ const SettingContents = styled.section`
 /**
  * module
  */
-export default class SettingServiceStaticWidget extends React.Component<{}, {}> {
+export default class ServiceStaticWidget extends React.Component<{}, {}> {
     public render(): React.ReactNode {
         return (
             <SettingContents>

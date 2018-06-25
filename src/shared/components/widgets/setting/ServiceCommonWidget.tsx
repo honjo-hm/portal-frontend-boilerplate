@@ -10,7 +10,7 @@ import { SettingServiceLinkCommonParts } from "../../parts/setting/SettingServic
 /**
  * props
  */
-export interface SettingServiceProps {
+export interface ServiceCommonProps {
     title: string;
     route: string;
 }
@@ -27,11 +27,7 @@ const SettingContents = styled.section`
 /**
  * module
  */
-export default class SettingServiceCommonWidget extends React.Component<SettingServiceProps, {}> {
-    constructor (props: SettingServiceProps) {
-        super(props);
-    }
-
+export default class ServiceCommonWidget extends React.Component<ServiceCommonProps, {}> {
     public render(): React.ReactNode {
         return (
             <SettingContents>

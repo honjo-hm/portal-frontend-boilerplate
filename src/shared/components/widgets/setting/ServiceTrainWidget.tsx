@@ -22,7 +22,7 @@ const SettingList = styled.ul`
 /**
  * module
  */
-export default class SettingServiceTrainWidget extends React.Component<{}, {}> {
+export default class ServiceTrainWidget extends React.Component<{}, {}> {
 
     static readonly TRAIN_NUM: number = 3;
 

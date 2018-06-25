@@ -54,7 +54,7 @@ const CITY = {
 /**
  * module
  */
-export default class SettingCityListWidget extends React.Component<{}, {}> {
+export default class CityListWidget extends React.Component<{}, {}> {
     public render(): React.ReactNode {
         let cities = [
             {name: CITY["37201"], code: "37201"},

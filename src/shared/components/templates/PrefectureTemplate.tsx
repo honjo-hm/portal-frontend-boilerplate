@@ -4,8 +4,8 @@
 import React from "react";
 import styled from 'styled-components'
 
-import SettingRegionInfomationWidget from "../widgets/setting/SettingRegionInfomationWidget";
-import SettingPrefectureListWidget from "../widgets/setting/SettingPrefectureListWidget";
+import PrefectureListWidget from "../widgets/setting/PrefectureListWidget";
+import RegionInfomationWidget from "../widgets/setting/RegionInfomationWidget";
 import SubPageDrawerBottunWidget from "../widgets/setting/SubPageDrawerBottunWidget";
 import SubPageDrawerCoverWidget from "../widgets/setting/SubPageDrawerCoverWidget";
 import SubPageDrawerWidget from "../widgets/setting/SubPageDrawerWidget";
@@ -39,8 +39,8 @@ export default class PrefectureTemplate extends React.Component<SettingsProps> {
                 <div>
                     <SubPageHeaderWidget title={this.props.title}/>
                     <Setting>
-                        <SettingRegionInfomationWidget route="settingWeatherRegion" code="01" />
-                        <SettingPrefectureListWidget route="settingWeatherCity" code="01" />
+                        <RegionInfomationWidget route="settingWeatherRegion" code="01" />
+                        <PrefectureListWidget route="settingWeatherCity" code="01" />
                     </Setting>
                 </div>
                 {/* ↓↓サイドメニュー↓↓ */}

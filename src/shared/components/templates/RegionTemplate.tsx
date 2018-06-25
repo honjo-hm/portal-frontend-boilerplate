@@ -4,8 +4,8 @@
 import React from "react";
 import styled from 'styled-components'
 
-import SettingAreaInfomationWidget from "../widgets/setting/SettingAreaInfomationWidget";
-import SettingRegionListWidget from "../widgets/setting/SettingRegionListWidget";
+import AreaInfomationWidget from "../widgets/setting/AreaInfomationWidget";
+import RegionListWidget from "../widgets/setting/RegionListWidget";
 import SubPageDrawerBottunWidget from "../widgets/setting/SubPageDrawerBottunWidget";
 import SubPageDrawerCoverWidget from "../widgets/setting/SubPageDrawerCoverWidget";
 import SubPageDrawerWidget from "../widgets/setting/SubPageDrawerWidget";
@@ -40,8 +40,8 @@ export default class RegionTemplate extends React.Component<SettingsProps> {
                 <div>
                     <SubPageHeaderWidget title={this.props.title}/>
                     <Setting>
-                        <SettingAreaInfomationWidget route="settingServices" />
-                        <SettingRegionListWidget route="settingWeatherPrefecture" />
+                        <AreaInfomationWidget route="settingServices" label="地域" />
+                        <RegionListWidget route="settingWeatherPrefecture" />
                     </Setting>
                 </div>
                 {/* ↓↓サイドメニュー↓↓ */}

@@ -9,7 +9,7 @@ import { SettingAreaParts } from "../../parts/setting/SettingAreaParts";
 /**
  * props
  */
-export interface SettingRegionListProps {
+export interface RegionListProps {
     route: string;
 }
 
@@ -48,7 +48,7 @@ const SettingList = styled.ul`
 /**
  * module
  */
-export default class SettingRegionListWidget extends React.Component<SettingRegionListProps, {}> {
+export default class RegionListWidget extends React.Component<RegionListProps, {}> {
 
     // 地域データ
     static readonly AREAS: {[key: string]: string;}[]  = [
@@ -77,7 +77,7 @@ export default class SettingRegionListWidget extends React.Component<SettingRegi
         return (
             <SettingList>
                 {
-                    SettingRegionListWidget.AREAS.map((region) => {
+                    RegionListWidget.AREAS.map((region) => {
                         let route: string = this.props.route;
                         return <SettingAreaParts route={route} region={region} />
                     })

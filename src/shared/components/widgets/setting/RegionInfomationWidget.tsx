@@ -5,9 +5,9 @@ import React from "react";
 import styled from 'styled-components'
 
 import { SettingBackBottunParts } from "../../parts/setting/SettingBackButtonParts";
-import SettingRegionListWidget from "./SettingRegionListWidget";
+import SettingRegionListWidget from "./RegionListWidget";
 
-export interface SettingAreaInfomationProps {
+export interface RegionInfomationProps {
     route: string;
     code: string;
     // params: {[key: string]: string}[];
@@ -30,7 +30,7 @@ const SettingLeadCurrentText = styled.p`
 /**
  * module
  */
-export default class SettingRegionInfomationWidget extends React.Component<SettingAreaInfomationProps, {}> {
+export default class RegionInfomationWidget extends React.Component<RegionInfomationProps, {}> {
     public render(): React.ReactNode {
         return (
             <SettingLead>

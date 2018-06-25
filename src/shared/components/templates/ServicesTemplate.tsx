@@ -4,10 +4,10 @@
 import React from "react";
 import styled from 'styled-components'
 
+import ServiceCommonWidget from "../widgets/setting/ServiceCommonWidget";
+import ServiceTrainWidget from "../widgets/setting/ServiceTrainWidget";
+import ServiceStaticWidget from "../widgets/setting/ServiceStaticWidget";
 import SettingDescriptionWidget from "../widgets/setting/SettingDescriptionWidget";
-import SettingServiceCommonWidget from "../widgets/setting/SettingServiceCommonWidget";
-import SettingServiceTrainWidget from "../widgets/setting/SettingServiceTrainWidget";
-import SettingServiceStaticWidget from "../widgets/setting/SettingServiceStaticWidget";
 import SubPageDrawerBottunWidget from "../widgets/setting/SubPageDrawerBottunWidget";
 import SubPageDrawerCoverWidget from "../widgets/setting/SubPageDrawerCoverWidget";
 import SubPageDrawerWidget from "../widgets/setting/SubPageDrawerWidget";
@@ -35,10 +35,10 @@ export default class ServicesTemplate extends React.Component<SettingsProps> {
                     <SubPageHeaderWidget title={this.props.title}/>
                     <Setting>
                         <SettingDescriptionWidget />
-                        <SettingServiceCommonWidget title="天気設定" route="settingWeatherRegion"/>
-                        <SettingServiceCommonWidget title="占い設定" route="index"/>
-                        <SettingServiceTrainWidget />
-                        <SettingServiceStaticWidget />
+                        <ServiceCommonWidget title="天気設定" route="settingWeatherRegion"/>
+                        <ServiceCommonWidget title="占い設定" route="index"/>
+                        <ServiceTrainWidget />
+                        <ServiceStaticWidget />
                     </Setting>
                 </div>
                 {/* ↓↓サイドメニュー↓↓ */}

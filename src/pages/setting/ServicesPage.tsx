@@ -5,7 +5,7 @@
  * @since 2018.XX.XX
  * @copyright mediba.inc
  */
-import {} from "../../shared/style/setting/global";
+import "../../shared/style/setting/global";
 
 import ServicesTemplate from "../../shared/components/templates/ServicesTemplate";
 

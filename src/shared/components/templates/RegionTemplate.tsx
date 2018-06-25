@@ -11,7 +11,6 @@ import SubPageDrawerCoverWidget from "../widgets/setting/SubPageDrawerCoverWidge
 import SubPageDrawerWidget from "../widgets/setting/SubPageDrawerWidget";
 import SubPageHeaderWidget from "../widgets/setting/SubPageHeaderWidget";
 
-
 /**
  * props
  */
@@ -34,7 +33,7 @@ const Setting = styled.div`
 /**
  * module
  */
-export default class SettingRegionTemplate extends React.Component<SettingsProps> {
+export default class RegionTemplate extends React.Component<SettingsProps> {
     public render(): React.ReactNode {
         return (
             <div>

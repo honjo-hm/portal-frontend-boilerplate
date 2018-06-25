@@ -33,7 +33,7 @@ const Setting = styled.div`
 /**
  * module
  */
-export default class SettingWeatherTemplate extends React.Component<SettingsProps> {
+export default class WeatherTemplate extends React.Component<SettingsProps> {
     public render(): React.ReactNode {
         return (
             <div>

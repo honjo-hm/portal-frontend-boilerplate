@@ -7,11 +7,11 @@
  */
 import {} from "../../shared/style/setting/global";
 
-import SettingPrefectureTemplate from "../../shared/components/templates/SettingPrefectureTemplate";
+import PrefectureTemplate from "../../shared/components/templates/PrefectureTemplate";
 
 // module
 export default () => (
-    <SettingPrefectureTemplate title="天気設定"/>
+    <PrefectureTemplate title="天気設定"/>
 );
 
 

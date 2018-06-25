@@ -7,11 +7,11 @@
  */
 import {} from "../../shared/style/setting/global";
 
-import SettingRegionTemplate from "../../shared/components/templates/SettingRegionTemplate";
+import RegionTemplate from "../../shared/components/templates/RegionTemplate";
 
 // module
  export default () => (
-    <SettingRegionTemplate title="天気設定" />
+    <RegionTemplate title="天気設定" />
 );
 
 

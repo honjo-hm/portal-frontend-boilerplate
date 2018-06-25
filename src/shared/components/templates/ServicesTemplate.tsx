@@ -13,8 +13,6 @@ import SubPageDrawerCoverWidget from "../widgets/setting/SubPageDrawerCoverWidge
 import SubPageDrawerWidget from "../widgets/setting/SubPageDrawerWidget";
 import SubPageHeaderWidget from "../widgets/setting/SubPageHeaderWidget";
 
-
-
 /**
  * props
  */
@@ -29,12 +27,7 @@ const Setting = styled.div`
 /**
  * module
  */
-export default class SettingServicesTemplate extends React.Component<SettingsProps> {
-
-    constructor (props: SettingsProps) {
-        super(props);
-    }
-
+export default class ServicesTemplate extends React.Component<SettingsProps> {
     public render(): React.ReactNode {
         return (
             <div>

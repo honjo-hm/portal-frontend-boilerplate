@@ -7,11 +7,11 @@
  */
 import {} from "../../shared/style/setting/global";
 
-import SettingServicesTemplate from "../../shared/components/templates/SettingServicesTemplate";
+import ServicesTemplate from "../../shared/components/templates/ServicesTemplate";
 
 // module
  export default () => (
-    <SettingServicesTemplate title="個人設定" />
+    <ServicesTemplate title="個人設定" />
 );
 
 

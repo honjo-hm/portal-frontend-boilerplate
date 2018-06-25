@@ -24,8 +24,6 @@ const SettingList = styled.ul`
  */
 export default class ServiceTrainWidget extends React.Component<{}, {}> {
 
-    static readonly TRAIN_NUM: number = 3;
-
     public render(): React.ReactNode {
         return (
             <SettingContents>

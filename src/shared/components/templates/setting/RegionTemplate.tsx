@@ -15,14 +15,14 @@ import SubPageHeaderWidget from "../../widgets/setting/SubPageHeaderWidget";
 /**
  * props
  */
-export interface SettingsProps {
+interface RegionProps {
     title: string;
 }
 
 /**
  * module
  */
-export default class RegionTemplate extends React.Component<SettingsProps> {
+export default class RegionTemplate extends React.Component<RegionProps> {
     public render(): React.ReactNode {
         return (
             <div>

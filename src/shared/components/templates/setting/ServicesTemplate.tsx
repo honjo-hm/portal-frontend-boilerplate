@@ -17,14 +17,14 @@ import SubPageHeaderWidget from "../../widgets/setting/SubPageHeaderWidget";
 /**
  * props
  */
-export interface SettingsProps {
-    title: string;
+interface ServicesProps {
+   title: string;
 }
 
 /**
  * module
  */
-export default class ServicesTemplate extends React.Component<SettingsProps> {
+export default class ServicesTemplate extends React.Component<ServicesProps, {}> {
     public render(): React.ReactNode {
         return (
             <div>

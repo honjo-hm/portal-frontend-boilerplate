@@ -15,14 +15,14 @@ import SubPageHeaderWidget from "../../widgets/setting/SubPageHeaderWidget";
 /**
  * props
  */
-export interface SettingsProps {
+interface PrefectureProps {
     title: string;
 }
 
 /**
  * module
  */
-export default class PrefectureTemplate extends React.Component<SettingsProps> {
+export default class PrefectureTemplate extends React.Component<PrefectureProps> {
     public render(): React.ReactNode {
         return (
             <div>

@@ -15,14 +15,14 @@ import SubPageHeaderWidget from "../../widgets/setting/SubPageHeaderWidget";
 /**
  * props
  */
-export interface SettingsProps {
+interface WeatherProps {
     title: string;
 }
 
 /**
  * module
  */
-export default class WeatherTemplate extends React.Component<SettingsProps> {
+export default class WeatherTemplate extends React.Component<WeatherProps> {
     public render(): React.ReactNode {
         return (
             <div>

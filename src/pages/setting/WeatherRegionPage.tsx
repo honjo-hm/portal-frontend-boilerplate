@@ -1,12 +1,12 @@
 /**
- * SettingServices Page
+ * Setting Weather Page
  *
  * @package Page
  * @since 2018.XX.XX
  * @copyright mediba.inc
  */
 
-import SettingServicesTemplate from "../shared/components/templates/SettingServicesTemplate";
+import SettingRegionTemplate from "../../shared/components/templates/SettingRegionTemplate";
 import { injectGlobal } from "styled-components";
 
 /**
@@ -63,7 +63,7 @@ injectGlobal`
 
 // module
  export default () => (
-    <SettingServicesTemplate title="個人設定" />
+    <SettingRegionTemplate title="天気設定" />
 );
 
 

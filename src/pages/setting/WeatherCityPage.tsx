@@ -6,7 +6,7 @@
  * @copyright mediba.inc
  */
 
-import SettingWeatherTemplate from "../shared/components/templates/SettingWeatherTemplate";
+import SettingWeatherTemplate from "../../shared/components/templates/SettingWeatherTemplate";
 import { injectGlobal } from "styled-components";
 
 /**

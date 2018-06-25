@@ -1,12 +1,12 @@
 /**
- * Setting Weather Page
+ * Setting Weather Region Page
  *
  * @package Page
  * @since 2018.XX.XX
  * @copyright mediba.inc
  */
 
-import SettingRegionTemplate from "../shared/components/templates/SettingRegionTemplate";
+import SettingPrefectureTemplate from "../../shared/components/templates/SettingPrefectureTemplate";
 import { injectGlobal } from "styled-components";
 
 /**
@@ -62,8 +62,8 @@ injectGlobal`
 `;
 
 // module
- export default () => (
-    <SettingRegionTemplate title="天気設定" />
+export default () => (
+    <SettingPrefectureTemplate title="天気設定"/>
 );
 
 

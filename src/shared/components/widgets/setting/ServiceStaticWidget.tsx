@@ -2,18 +2,11 @@
  * 個人設定ページ - サービス設定(その他)
  */
 import React from "react";
-import styled from 'styled-components'
+
+import { SettingContents } from "../../../style/setting/common";
 
 import { ServiceListTitleParts } from "../../parts/setting/ServiceListTitleParts";
 import { ServiceLinkStaticParts } from "../../parts/setting/ServiceLinkStaticParts";
-
-/**
- * style
- */
-const SettingContents = styled.section`
-    border-top: "1px solid #e9e9e9";
-    margin: 10px 0 20px;
-`;
 
 /**
  * module

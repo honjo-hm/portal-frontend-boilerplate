@@ -2,29 +2,19 @@
  * 個人設定ページ - 戻るボタン
  */
 import React from "react";
-import styled from 'styled-components'
+
+import { SettingLead, SettingLeadCurrentText } from "../../../style/setting/common";
 
 import { BackBottunParts } from "../../parts/setting/BackButtonParts";
 import { SetLocationParts } from "../../parts/setting/SetLocationParts";
 
+/**
+ * props
+ */
 export interface AreaInfomationProps {
     route: string;
     label: string;
 }
-
-/**
- * style
- */
-const SettingLead = styled.div`
-    margin: 10px 0;
-    text-align: center;
-`;
-
-const SettingLeadCurrentText = styled.p`
-    margin-top: 5px;
-    font-weight: 700;
-    font-size: 15px;
-`;
 
 /**
  * module

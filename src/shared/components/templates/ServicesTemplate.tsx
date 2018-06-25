@@ -2,7 +2,8 @@
  * 個人設定ページ
  */
 import React from "react";
-import styled from 'styled-components'
+
+import { Setting } from "../../style/setting/common";
 
 import ServiceCommonWidget from "../widgets/setting/ServiceCommonWidget";
 import ServiceTrainWidget from "../widgets/setting/ServiceTrainWidget";
@@ -19,10 +20,6 @@ import SubPageHeaderWidget from "../widgets/setting/SubPageHeaderWidget";
 export interface SettingsProps {
     title: string;
 }
-
-const Setting = styled.div`
-    margin: 10px 0 65px;
-`;
 
 /**
  * module

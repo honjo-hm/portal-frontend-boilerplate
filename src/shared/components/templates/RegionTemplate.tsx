@@ -2,7 +2,8 @@
  * 個人設定ページ
  */
 import React from "react";
-import styled from 'styled-components'
+
+import { Setting } from "../../style/setting/common";
 
 import AreaInfomationWidget from "../widgets/setting/AreaInfomationWidget";
 import RegionListWidget from "../widgets/setting/RegionListWidget";
@@ -17,18 +18,6 @@ import SubPageHeaderWidget from "../widgets/setting/SubPageHeaderWidget";
 export interface SettingsProps {
     title: string;
 }
-
-/**
- * style
- */
-const Setting = styled.div`
-    margin: 10px 0 65px;
-
-    & a {
-        font-size: 15px;
-    }
-`;
-
 
 /**
  * module

@@ -2,7 +2,8 @@
  * 個人設定ページ - 都道府県設定
  */
 import React from "react";
-import styled from 'styled-components'
+
+import { Setting } from "../../style/setting/common";
 
 import PrefectureListWidget from "../widgets/setting/PrefectureListWidget";
 import RegionInfomationWidget from "../widgets/setting/RegionInfomationWidget";
@@ -17,17 +18,6 @@ import SubPageHeaderWidget from "../widgets/setting/SubPageHeaderWidget";
 export interface SettingsProps {
     title: string;
 }
-
-/**
- * style
- */
-const Setting = styled.div`
-    margin: 10px 0 65px;
-
-    & a {
-        font-size: 15px;
-    }
-`;
 
 /**
  * module

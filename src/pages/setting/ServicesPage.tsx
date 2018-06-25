@@ -13,5 +13,3 @@ import ServicesTemplate from "../../shared/components/templates/ServicesTemplate
  export default () => (
     <ServicesTemplate title="個人設定" />
 );
-
-

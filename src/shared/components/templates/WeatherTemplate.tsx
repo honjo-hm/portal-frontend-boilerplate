@@ -2,7 +2,8 @@
  * 個人設定ページ - 天気設定(市区町村)
  */
 import React from "react";
-import styled from 'styled-components'
+
+import { Setting } from "../../style/setting/common";
 
 import CityListWidget from "../widgets/setting/CityListWidget";
 import RegionInfomationWidget from "../widgets/setting/RegionInfomationWidget";
@@ -11,24 +12,12 @@ import SubPageDrawerCoverWidget from "../widgets/setting/SubPageDrawerCoverWidge
 import SubPageDrawerWidget from "../widgets/setting/SubPageDrawerWidget";
 import SubPageHeaderWidget from "../widgets/setting/SubPageHeaderWidget";
 
-
 /**
  * props
  */
 export interface SettingsProps {
     title: string;
 }
-
-/**
- * style
- */
-const Setting = styled.div`
-    margin: 10px 0 65px;
-
-    & a {
-        font-size: 15px;
-    }
-`;
 
 /**
  * module

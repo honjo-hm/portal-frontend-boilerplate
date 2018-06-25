@@ -2,16 +2,8 @@
  * 個人設定ページ - 説明文
  */
 import React from "react";
-import styled from 'styled-components'
 
- /**
-  * style
-  */
-const SettingText = styled.div`
-    margin: 10px 10px 0;
-    line-height: 1.5;
-    font-size: 14px;
-`;
+import { SettingText } from "../../../style/setting/parts";
 
 /**
  * parts

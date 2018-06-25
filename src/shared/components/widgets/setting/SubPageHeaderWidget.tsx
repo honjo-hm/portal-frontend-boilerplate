@@ -2,8 +2,8 @@
  * 2階層以下のヘッダー
  */
 import React from "react";
-import styled from 'styled-components'
 import { injectGlobal } from "styled-components";
+import styled from 'styled-components'
 
 import { SubPageHeaderTitleParts} from "../../parts/setting/SubPageHeaderTitleParts";
 import { SubPageHomeBottunParts } from "../../parts/setting/SubPageHomeBottunParts";

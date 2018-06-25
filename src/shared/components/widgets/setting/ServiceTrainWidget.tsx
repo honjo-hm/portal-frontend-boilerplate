@@ -4,9 +4,9 @@
 import React from "react";
 import styled from 'styled-components'
 
-import { SettingServiceListTitleParts } from "../../parts/setting/SettingServiceListTitleParts";
-import { SettingServiceLinkTrainParts } from "../../parts/setting/SettingServiceLinkTrainParts";
-import { SettingClearBottunTrainParts } from "../../parts/setting/SettingClearButtonTrainParts";
+import { ServiceListTitleParts } from "../../parts/setting/ServiceListTitleParts";
+import { ServiceLinkTrainParts } from "../../parts/setting/ServiceLinkTrainParts";
+import { ClearButtonTrainParts } from "../../parts/setting/ClearButtonTrainParts";
 
 /**
  * style
@@ -29,13 +29,13 @@ export default class ServiceTrainWidget extends React.Component<{}, {}> {
     public render(): React.ReactNode {
         return (
             <SettingContents>
-                <SettingServiceListTitleParts title="路線設定"/>
+                <ServiceListTitleParts title="路線設定"/>
                 <SettingList>
-                    <SettingServiceLinkTrainParts label="路線1&nbsp;&nbsp;"/>
-                    <SettingServiceLinkTrainParts label="路線2&nbsp;&nbsp;"/>
-                    <SettingServiceLinkTrainParts label="路線3&nbsp;&nbsp;"/>
+                    <ServiceLinkTrainParts label="路線1&nbsp;&nbsp;"/>
+                    <ServiceLinkTrainParts label="路線2&nbsp;&nbsp;"/>
+                    <ServiceLinkTrainParts label="路線3&nbsp;&nbsp;"/>
                 </SettingList>
-                <SettingClearBottunTrainParts />
+                <ClearButtonTrainParts />
             </SettingContents>
         );
     }

@@ -3,7 +3,7 @@
  */
 import React from "react";
 
-export const SettingAreaPartsB = (props) => (
+export const AreaPartsB = (props) => (
     <li>
         <p onClick={() => setCookie(props.name, props.value)}>{props.name}</p>
     </li>  

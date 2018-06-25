@@ -42,7 +42,7 @@ const SettingTitleText = styled.h2`
 /**
  * parts
  */
-export const SettingServiceListTitleParts = (props) => (
+export const ServiceListTitleParts = (props) => (
     <SettingTitle>
         <SettingTitleText>{props.title}</SettingTitleText>
     </SettingTitle>

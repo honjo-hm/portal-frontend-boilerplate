@@ -38,7 +38,7 @@ const ServiceLinkAncher = styled.a`
 /**
  * parts
  */
-export const SettingServiceLinkCommonParts = (props) => (
+export const ServiceLinkCommonParts = (props) => (
     <SettingLinkText>
         <Link route={props.route}>
             <ServiceLinkAncher>

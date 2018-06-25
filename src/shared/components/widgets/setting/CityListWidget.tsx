@@ -4,7 +4,7 @@
 import React from "react";
 import styled from 'styled-components'
 
-import { SettingAreaPartsB } from "../../parts/setting/SettingAreaPartsB";
+import { AreaPartsB } from "../../parts/setting/AreaPartsB";
 
 /**
  * style
@@ -65,7 +65,7 @@ export default class CityListWidget extends React.Component<{}, {}> {
             <SettingList>
                 {
                     cities.map((city) => {
-                        return <SettingAreaPartsB name={city.name} />
+                        return <AreaPartsB name={city.name} />
                     })
                 }
             </SettingList>

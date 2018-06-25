@@ -4,8 +4,8 @@
 import React from "react";
 import styled from 'styled-components'
 
-import { SettingBackBottunParts } from "../../parts/setting/SettingBackButtonParts";
-import { SettingLocationParts } from "../../parts/setting/SettingLocationParts";
+import { BackBottunParts } from "../../parts/setting/BackButtonParts";
+import { SetLocationParts } from "../../parts/setting/SetLocationParts";
 
 export interface AreaInfomationProps {
     route: string;
@@ -33,10 +33,10 @@ export default class AreaInfomationWidget extends React.Component<AreaInfomation
     public render(): React.ReactNode {
         return (
             <SettingLead>
-                <SettingBackBottunParts route={this.props.route} />
+                <BackBottunParts route={this.props.route} />
                 <p>現在設定されている{this.props.label}}</p>
                 <SettingLeadCurrentText>未設定</SettingLeadCurrentText>
-                <SettingLocationParts />
+                <SetLocationParts />
             </SettingLead>
         );
     }

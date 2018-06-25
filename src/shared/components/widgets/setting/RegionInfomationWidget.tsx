@@ -4,7 +4,7 @@
 import React from "react";
 import styled from 'styled-components'
 
-import { SettingBackBottunParts } from "../../parts/setting/SettingBackButtonParts";
+import { BackBottunParts } from "../../parts/setting/BackButtonParts";
 import SettingRegionListWidget from "./RegionListWidget";
 
 export interface RegionInfomationProps {
@@ -34,7 +34,7 @@ export default class RegionInfomationWidget extends React.Component<RegionInfoma
     public render(): React.ReactNode {
         return (
             <SettingLead>
-                <SettingBackBottunParts route={this.props.route} />
+                <BackBottunParts route={this.props.route} />
                 <SettingLeadCurrentText>{SettingRegionListWidget.AREA_LIST[this.props.code]}</SettingLeadCurrentText>
             </SettingLead>
         );

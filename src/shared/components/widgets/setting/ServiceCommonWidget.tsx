@@ -4,8 +4,8 @@
 import React from "react";
 import styled from 'styled-components'
 
-import { SettingServiceListTitleParts } from "../../parts/setting/SettingServiceListTitleParts";
-import { SettingServiceLinkCommonParts } from "../../parts/setting/SettingServiceLinkCommonParts";
+import { ServiceListTitleParts } from "../../parts/setting/ServiceListTitleParts";
+import { ServiceLinkCommonParts } from "../../parts/setting/ServiceLinkCommonParts";
 
 /**
  * props
@@ -31,8 +31,8 @@ export default class ServiceCommonWidget extends React.Component<ServiceCommonPr
     public render(): React.ReactNode {
         return (
             <SettingContents>
-                <SettingServiceListTitleParts title={this.props.title} />
-                <SettingServiceLinkCommonParts route={this.props.route}/>
+                <ServiceListTitleParts title={this.props.title} />
+                <ServiceLinkCommonParts route={this.props.route}/>
             </SettingContents>
         );
     }

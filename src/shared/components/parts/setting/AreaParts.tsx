@@ -7,7 +7,7 @@ import styled from 'styled-components'
 //@ts-ignore
 import { Link } from "../../../routes/index";
 
-export const SettingAreaParts = (props) => (
+export const AreaParts = (props) => (
     <li>
         <Link route={props.route} regionCode={props.region.code}>
             <a>{props.region.name}</a>

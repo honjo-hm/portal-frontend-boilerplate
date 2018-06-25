@@ -41,7 +41,7 @@ const SettingLeadBackLink = styled.p`
 /**
  * parts
  */
-export const SettingBackBottunParts = (props) => (
+export const BackBottunParts = (props) => (
     <SettingLeadBackLink>
         <Link route={props.route} params={props.params}>
             <a data-ga-action="Personal" data-ga-label="戻る">戻る</a>

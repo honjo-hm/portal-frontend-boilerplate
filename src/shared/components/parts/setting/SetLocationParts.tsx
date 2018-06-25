@@ -31,7 +31,7 @@ const onClickSettingLocationBottun = (e) => {
     console.log(e);
 };
 
-export const SettingLocationParts = () => (
+export const SetLocationParts = () => (
     <SettingLocationBtn onClick={e => onClickSettingLocationBottun(e)}>
         <SettingLocationText>現在地から設定</SettingLocationText>
     </SettingLocationBtn>

@@ -1,5 +1,5 @@
 /**
- * 個人設定ページ - 設定変更ページリンク(その他)
+ * 個人設定ページ - 設定変更ページリンク(路線)
  */
 import React from "react";
 import styled from 'styled-components'
@@ -10,16 +10,22 @@ import { Link } from "../../../routes/index";
 /**
  * style
  */
-const SettingLinkText = styled.p`
+const SettingListItems = styled.li`
     border-bottom: 1px solid #e9e9e9;
 `;
 
-const ServiceLinkAncher = styled.a`
+const ServiceLinkAncher = styled.p`
     display: block;
     padding: 12px 25px 12px 10px;
     font-size: 15px;
     position: relative;
 
+    &:visited {
+        color: #727272;
+    }
+    & a:active, & a:hover, & a:link {
+        color: #3c3c3c;
+    }
     &:after {
         display: block;
         position: absolute;
@@ -38,25 +44,12 @@ const ServiceLinkAncher = styled.a`
 /**
  * parts
  */
-export const SettingServiceLinkStaticParts = (props) => (
-    <SettingLinkText>
-        {(() => {
-            if (props.link) {
-                return (
-                    <ServiceLinkAncher href={props.link}>
-                        <span>{props.label}</span>
-                    </ServiceLinkAncher>
-                );
-
-            } else {
-                return (
-                    <Link route={props.url}>
-                        <ServiceLinkAncher>
-                            <span>{props.label}</span>
-                        </ServiceLinkAncher>
-                    </Link>
-                );
-            }
-        })()}
-    </SettingLinkText>
+export const ServiceLinkTrainParts = (props) => (
+    <SettingListItems>
+            <Link route="index">
+                <ServiceLinkAncher>
+                    {props.label}<span>未設定</span>
+                </ServiceLinkAncher>
+            </Link>
+    </SettingListItems>
 );

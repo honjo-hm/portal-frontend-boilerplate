@@ -4,7 +4,7 @@
 import React from "react";
 import styled from 'styled-components'
 
-import { SettingAreaPartsA } from "../../parts/setting/SettingAreaPartsA";
+import { AreaPartsA } from "../../parts/setting/AreaPartsA";
 
 /**
  * props
@@ -68,7 +68,7 @@ export default class PrefectureListWidget extends React.Component<PrefectureList
             <SettingList>
                 {
                     regions.map((region) => {
-                        return <SettingAreaPartsA route={this.props.route} region={region} prefecture="36" />
+                        return <AreaPartsA route={this.props.route} region={region} prefecture="36" />
                     })
                 }
             </SettingList>

@@ -83,7 +83,7 @@ const onClickClearSetting = (e) => {
 /**
  * parts
  */
-export const SettingClearBottunTrainParts = (props) => (
+export const ClearButtonTrainParts = (props) => (
     <SettingBottunClear onClick={e => onClickClearSetting(e)}>
         <p data-ga-action="Personal" data-ga-label="路線設定クリア">
             <span>設定した路線をクリア</span>

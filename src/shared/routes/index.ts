@@ -17,12 +17,6 @@ router
     pattern: "/",
     page: "/IndexPage"
 })
-// 設定ページ
-.add({
-    name: "settings",
-    pattern: "/settings",
-    page: "/SettingsPage"
-})
 // 個人設定ページ
 .add({
     name: "settingServices",

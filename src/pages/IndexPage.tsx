@@ -45,7 +45,7 @@ export default () => (
     <div>
         <h2>Hello Index</h2>
         <ul>
-            <Link route="settings"><a>settings</a></Link>
+            <Link route="settingServices"><a>settings</a></Link>
         </ul>
     </div>
 )

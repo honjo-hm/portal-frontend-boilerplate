@@ -14,9 +14,20 @@ import { Link } from "../../../routes/index";
  */
 export const BackBottunParts = (props) => (
     <SettingLeadBackLink>
-        <Link route={props.route} regionCode={props.regionCode} prefCode={props.prefCode} params={{regionCode: "01"}}>
-            <a data-ga-action="Personal">戻る</a>
-        </Link>
+    {(() => {
+        let params = {
+            children: <a>戻る</a>,
+            route: props.params.route,
+        };
+
+        // patternに一致するパラメータを追加
+        const routeParams = props.params.params;
+        for (let key in routeParams) {
+            params[key] = routeParams[key];
+        }
+
+        return Link(params)
+    })()}
     </SettingLeadBackLink>
 );
 

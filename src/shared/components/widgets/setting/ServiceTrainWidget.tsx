@@ -5,7 +5,6 @@ import React from "react";
 import styled from 'styled-components'
 
 import { ServiceLinkCommonParts } from "../../parts/setting/ServiceLinkCommonParts";
-import { ServiceLinkTrainParts } from "../../parts/setting/ServiceLinkTrainParts";
 import { ServiceListTitleParts } from "../../parts/setting/ServiceListTitleParts";
 import { ClearButtonTrainParts } from "../../parts/setting/ClearButtonTrainParts";
 

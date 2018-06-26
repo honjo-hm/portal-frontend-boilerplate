@@ -63,6 +63,7 @@ export default class ServicesTemplate extends React.Component<ServicesProps, Set
     private onClearTrains(e)
     {
         // TODO: cookie削除
+        console.log("路線くりあ！");
         const newTrains: any = this.state.trains.map((train) => {
             train.label = "未設定";
             return train;
@@ -76,8 +77,8 @@ export default class ServicesTemplate extends React.Component<ServicesProps, Set
         // 設定値
         const weatherInfo: {[key: string]: string} = {prefix: "", label: this.state.weather.label, route:"settingWeatherRegion"};
         const fortuneInfo: {[key: string]: string} = {prefix: "", label: this.state.fortune.label, route:"index"};
-        const trainInfos: {[key: string]: string}[] = this.state.trains.map((train, index) => {
-            return {prefix: "路線" + (index + 1) + "  ", label: train.label, route:"index"};
+        const trainInfo: {[key: string]: string}[] = this.state.trains.map((train, index) => {
+            return {prefix: `路線${index + 1}  `, label: train.label, route:"index"};
         });
 
         return (
@@ -88,7 +89,7 @@ export default class ServicesTemplate extends React.Component<ServicesProps, Set
                         <SettingDescriptionWidget />
                         <ServiceCommonWidget title="天気設定" route="settingWeatherRegion" links={weatherInfo} />
                         <ServiceCommonWidget title="占い設定" route="index" links={fortuneInfo} />
-                        <ServiceTrainWidget title="路線設定" links={trainInfos} onClick={e => this.onClearTrains(e)} />
+                        <ServiceTrainWidget title="路線設定" links={trainInfo} onClick={e => this.onClearTrains(e)} />
                         <ServiceStaticWidget />
                     </Setting>
                 </div>

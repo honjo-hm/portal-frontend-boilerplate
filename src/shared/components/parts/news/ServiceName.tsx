@@ -9,6 +9,6 @@ const NewsServiceName = styled.span`
     color: #9e9e9e; 
 `;
 
-export const ServiceName = () => (
-    <NewsServiceName>時事通信社</NewsServiceName>
+export const ServiceName = (props) => (
+    <NewsServiceName>{props.newsItem}</NewsServiceName>
 );

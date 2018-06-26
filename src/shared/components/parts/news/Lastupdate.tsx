@@ -9,6 +9,6 @@ const NewsLastupdate = styled.span`
     color: #9e9e9e; 
 `;
 
-export const Lastupdate = () => (
-    <NewsLastupdate>6/18 11:40</NewsLastupdate>
+export const Lastupdate = (props) => (
+    <NewsLastupdate>{props.newsItem}</NewsLastupdate>
 );

@@ -6,11 +6,6 @@ import { ServiceName } from "./ServiceName";
 import { Label } from "./Label";
 import { Thumbnail } from "./Thumbnail";
 
-const NewsText = styled.div`
-    -webkit-box-flex: 1;
-    padding: 3px 0 3px 5px;
-`;
-
 const NewsItem = styled.li`
     width: 100%;
     border-top: 1px solid #f6f6f6;
@@ -29,23 +24,29 @@ const NewsLink = styled.a`
     padding: 3px 0;
 `;
 
-export default class NewsParts extends React.Component {
+const NewsText = styled.div`
+    -webkit-box-flex: 1;
+    padding: 3px 0 3px 5px;
+`;
 
-    public render(): React.ReactNode {
-        return (
-            <ul>
-                <NewsItem>
-                    <NewsLink>
-                        <Thumbnail />
-                        <NewsText>
-                            <Title />
-                            <Label />
-                            <Lastupdate />      
-                            <ServiceName />
-                        </NewsText>
-                    </NewsLink>
-                </NewsItem>
-            </ul>
-        );
-    }
-}   
+const NewsSubText = styled.div`
+    line-height: 1.2;
+    color: #9e9e9e;
+    font-size: 10px;
+`;
+
+export const NewsParts = (props) => (
+    <NewsItem>
+        <NewsLink>
+            <Thumbnail newsItem={props.newsItem.s_thumbnail} />
+            <NewsText>
+                <Title newsItem={props.newsItem.title} />
+                <NewsSubText>
+                    <Label />
+                    <Lastupdate newsItem={props.newsItem.updated_date} />
+                    <ServiceName newsItem={props.newsItem.credit} />
+                </NewsSubText>
+            </NewsText>
+        </NewsLink>
+    </NewsItem>
+);

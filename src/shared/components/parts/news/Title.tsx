@@ -10,6 +10,6 @@ const NewsTitle = styled.p`
     line-height: 1.5;
 `;
 
-export const Title = () => (
-    <NewsTitle>カジノ法案 衆院内閣委で可決</NewsTitle>
+export const Title = (props) => (
+    <NewsTitle>{props.newsItem}</NewsTitle>
 );

@@ -17,7 +17,7 @@ export const BackBottunParts = (props) => (
     {(() => {
         let params = {
             children: <a>戻る</a>,
-            route: props.params.route,
+            route: props.route,
         };
 
         // patternに一致するパラメータを追加

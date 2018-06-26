@@ -5,7 +5,8 @@ import React from "react";
 
 import { SettingList } from "../../../style/setting/common";
 
-import { AreaPartsA } from "../../parts/setting/AreaPartsA";
+import { AreaParts } from "../../parts/setting/AreaParts";
+
 
 /**
  * props
@@ -15,31 +16,43 @@ export interface PrefectureListProps {
     code: string
 }
 
-const PREFECTURE = {
-    "36": "徳島県",
-    "37": "香川県",
-    "38": "愛媛県",
-    "39": "高知県",
-}
-
 /**
  * module
  */
 export default class PrefectureListWidget extends React.Component<PrefectureListProps, {}> {
+    private getPrefectures() {
+        return this.callPref();
+    }
+
+    private callPref() {
+        return {
+            "36": "徳島県",
+            "37": "香川県",
+            "38": "愛媛県",
+            "39": "高知県",
+        };
+    }
+
     public render(): React.ReactNode {
-        let regions = [
-            {name: PREFECTURE["36"], code: "36"},
-            {name: PREFECTURE["37"], code: "37"},
-            {name: PREFECTURE["38"], code: "38"},
-            {name: PREFECTURE["39"], code: "39"}
-        ];
+        const route: string = this.props.route;
+        const regionCode = this.props.code;
+        const prefectures = this.getPrefectures();
+        let list: any = [];
+
+        for (let key in prefectures) {
+            let area = {
+                name: prefectures[key],
+                params: {
+                    regionCode: regionCode,
+                    prefCode: key
+                }
+            };
+            list.push(<AreaParts route={route} area={area} />);
+        }
+
         return (
             <SettingList>
-                {
-                    regions.map((region) => {
-                        return <AreaPartsA route={this.props.route} region={region} prefecture="36" />
-                    })
-                }
+                {list}
             </SettingList>
         );
     }

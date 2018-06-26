@@ -8,7 +8,7 @@ import { SettingList } from "../../../style/setting/common";
 import { AreaParts } from "../../parts/setting/AreaParts";
 
 // 地域情報
-export const AREA_LIST: {[key: string]: string;} = {
+export const REGION_LIST: {[key: string]: string;} = {
     "01": "北海道",
     "02": "関東",
     "03": "甲信越・北陸",
@@ -32,10 +32,15 @@ export interface RegionListProps {
 export default class RegionListWidget extends React.Component<RegionListProps, {}> {
     public render(): React.ReactNode {
         const route: string = this.props.route;
+        
         let list: any = [];
-
-        for (let key in AREA_LIST) {
-            let area = {name: AREA_LIST[key], regionCode: key}
+        for (let key in REGION_LIST) {
+            let area = {
+                name: REGION_LIST[key], 
+                params: {
+                    regionCode: key
+                }
+            }
             list.push(<AreaParts route={route} area={area} />);
         }
 

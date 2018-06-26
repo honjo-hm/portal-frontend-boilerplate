@@ -7,29 +7,36 @@ import { SettingList } from "../../../style/setting/common";
 
 import { AreaPartsB } from "../../parts/setting/AreaPartsB";
 
-const CITY = {
-    "37201": "高松市",
-    "37202": "丸亀市",
-    "37203": "坂出市",
-}
 
 /**
  * module
  */
 export default class CityListWidget extends React.Component<{}, {}> {
+    private getCities() {
+        return this.callPref();
+    }
+
+    private callPref() {
+        return {
+            "37201": "高松市",
+            "37202": "丸亀市",
+            "37203": "坂出市",
+        };
+    }
+
     public render(): React.ReactNode {
-        let cities = [
-            {name: CITY["37201"], code: "37201"},
-            {name: CITY["37202"], code: "37202"},
-            {name: CITY["37203"], code: "37203"},
-        ];
+        const cities = this.getCities();
+        let list: any = [];
+
+        for (let key in cities) {
+            console.log(key);
+            let area = {name: cities[key], code: key}
+            list.push(<AreaPartsB area={area} />);
+        }
+    
         return (
             <SettingList>
-                {
-                    cities.map((city) => {
-                        return <AreaPartsB name={city.name} />
-                    })
-                }
+                {list}
             </SettingList>
         );
     }

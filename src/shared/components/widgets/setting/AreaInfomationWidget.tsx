@@ -11,9 +11,15 @@ import { SetLocationParts } from "../../parts/setting/SetLocationParts";
 /**
  * props
  */
-export interface AreaInfomationProps {
-    route: string;
-    label: string;
+interface AreaInfomationProps {
+    information: InformationProps;
+}
+
+interface InformationProps {
+    route: "settingServices",
+    discription: "地域",
+    label: "未設定",
+    useLocation: "1",
 }
 
 /**
@@ -23,9 +29,9 @@ export default class AreaInfomationWidget extends React.Component<AreaInfomation
     public render(): React.ReactNode {
         return (
             <SettingLead>
-                <BackBottunParts route={this.props.route} />
-                <p>現在設定されている{this.props.label}}</p>
-                <SettingLeadCurrentText>未設定</SettingLeadCurrentText>
+                <BackBottunParts route={this.props.information.route} />
+                <p>現在設定されている{this.props.information.discription}</p>
+                <SettingLeadCurrentText>{this.props.information.label}</SettingLeadCurrentText>
                 <SetLocationParts />
             </SettingLead>
         );

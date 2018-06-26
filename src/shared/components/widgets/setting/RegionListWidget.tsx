@@ -7,6 +7,18 @@ import { SettingList } from "../../../style/setting/common";
 
 import { AreaParts } from "../../parts/setting/AreaParts";
 
+// 地域情報
+export const AREA_LIST: {[key: string]: string;} = {
+    "01": "北海道",
+    "02": "関東",
+    "03": "甲信越・北陸",
+    "04": "東海",
+    "05": "近畿",
+    "06": "中国",
+    "07": "四国",
+    "08": "九州・沖縄"
+};
+
 /**
  * props
  */
@@ -18,39 +30,18 @@ export interface RegionListProps {
  * module
  */
 export default class RegionListWidget extends React.Component<RegionListProps, {}> {
-
-    // 地域データ
-    static readonly AREAS: {[key: string]: string;}[]  = [
-        {name: "北海道・東北", code: "01"},
-        {name: "関東", code: "02"},
-        {name: "甲信越・北陸", code: "03"},
-        {name: "東海", code: "04"},
-        {name: "近畿", code: "05"},
-        {name: "中国", code: "06"},
-        {name: "四国", code: "07"},
-        {name: "九州・沖縄", code: "08"}
-    ];
-
-    static readonly AREA_LIST: {[key: string]: string;} = {
-        "01": "北海道",
-        "02": "関東",
-        "03": "甲信越・北陸",
-        "04": "東海",
-        "05": "近畿",
-        "06": "中国",
-        "07": "四国",
-        "08": "九州・沖縄"
-    };
-
     public render(): React.ReactNode {
+        const route: string = this.props.route;
+        let list: any = [];
+
+        for (let key in AREA_LIST) {
+            let area = {name: AREA_LIST[key], regionCode: key}
+            list.push(<AreaParts route={route} area={area} />);
+        }
+
         return (
             <SettingList>
-                {
-                    RegionListWidget.AREAS.map((region) => {
-                        let route: string = this.props.route;
-                        return <AreaParts route={route} region={region} />
-                    })
-                }
+                {list}
             </SettingList>
         );
     }

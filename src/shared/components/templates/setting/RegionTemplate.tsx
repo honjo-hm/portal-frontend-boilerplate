@@ -1,5 +1,5 @@
 /**
- * 個人設定ページ
+ * 個人設定ページ - 地域設定
  */
 import React from "react";
 
@@ -20,16 +20,36 @@ interface RegionProps {
 }
 
 /**
+ * state
+ */
+interface RegionState {
+    label: string;
+}
+
+/**
  * module
  */
-export default class RegionTemplate extends React.Component<RegionProps> {
+export default class RegionTemplate extends React.Component<RegionProps, RegionState> {
+    constructor(props) {
+        super(props);
+        this.state = {
+            label: "未設定"
+        };
+    }
+
     public render(): React.ReactNode {
+        const information: any = {
+            route: "settingServices",
+            discription: "地域",
+            label: this.state.label,
+        }; 
+
         return (
             <div>
                 <div>
                     <SubPageHeaderWidget title={this.props.title}/>
                     <Setting>
-                        <AreaInfomationWidget route="settingServices" label="地域" />
+                        <AreaInfomationWidget information={information} />
                         <RegionListWidget route="settingWeatherPrefecture" />
                     </Setting>
                 </div>

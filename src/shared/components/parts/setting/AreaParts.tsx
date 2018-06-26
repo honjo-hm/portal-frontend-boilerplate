@@ -9,8 +9,8 @@ import { Link } from "../../../routes/index";
 
 export const AreaParts = (props) => (
     <li>
-        <Link route={props.route} regionCode={props.region.code}>
-            <a>{props.region.name}</a>
+        <Link route={props.route} regionCode={props.area.regionCode} prefCode={props.area.prefCode}>
+            <a>{props.area.name}</a>
         </Link>
     </li>  
 );

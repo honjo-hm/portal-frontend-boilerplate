@@ -5,7 +5,7 @@ import React from "react";
 
 import { SettingList } from "../../../style/setting/common";
 
-import { AreaPartsB } from "../../parts/setting/AreaPartsB";
+import { AreaSetButtonParts } from "../../parts/setting/AreaSetButtonParts";
 
 
 /**
@@ -31,7 +31,7 @@ export default class CityListWidget extends React.Component<{}, {}> {
         for (let key in cities) {
             console.log(key);
             let area = {name: cities[key], code: key}
-            list.push(<AreaPartsB area={area} />);
+            list.push(<AreaSetButtonParts area={area} />);
         }
     
         return (

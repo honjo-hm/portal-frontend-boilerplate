@@ -6,7 +6,7 @@ import React from "react";
 //@ts-ignore
 import { Link } from "../../../routes/index";
 
-export const AreaParts = (props) => (
+export const AreaSelectButtonParts = (props) => (
     <li>
         {(() => {
             let params = {

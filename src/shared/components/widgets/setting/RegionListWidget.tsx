@@ -5,7 +5,7 @@ import React from "react";
 
 import { SettingList } from "../../../style/setting/common";
 
-import { AreaParts } from "../../parts/setting/AreaParts";
+import { AreaSelectButtonParts } from "../../parts/setting/AreaSelectButtonParts";
 
 // 地域情報
 export const REGION_LIST: {[key: string]: string;} = {
@@ -41,7 +41,7 @@ export default class RegionListWidget extends React.Component<RegionListProps, {
                     regionCode: key
                 }
             }
-            list.push(<AreaParts route={route} area={area} />);
+            list.push(<AreaSelectButtonParts route={route} area={area} />);
         }
 
         return (

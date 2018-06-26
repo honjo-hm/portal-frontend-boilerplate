@@ -5,7 +5,7 @@ import React from "react";
 
 import { SettingList } from "../../../style/setting/common";
 
-import { AreaParts } from "../../parts/setting/AreaParts";
+import { AreaSelectButtonParts } from "../../parts/setting/AreaSelectButtonParts";
 
 
 /**
@@ -47,7 +47,7 @@ export default class PrefectureListWidget extends React.Component<PrefectureList
                     prefCode: key
                 }
             };
-            list.push(<AreaParts route={route} area={area} />);
+            list.push(<AreaSelectButtonParts route={route} area={area} />);
         }
 
         return (

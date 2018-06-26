@@ -13,9 +13,9 @@ import { Link } from "../../../routes/index";
  */
 export const ServiceLinkCommonParts = (props) => (
     <SettingLinkText>
-        <Link route={props.route}>
+        <Link route={props.links.route}>
             <ServiceLinkAncher>
-                <span>未設定</span>
+                {props.links.prefix}<span>{props.links.label}</span>
             </ServiceLinkAncher>
         </Link>
     </SettingLinkText>

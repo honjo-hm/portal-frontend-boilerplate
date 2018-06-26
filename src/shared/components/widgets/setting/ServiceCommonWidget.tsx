@@ -14,6 +14,7 @@ import { ServiceLinkCommonParts } from "../../parts/setting/ServiceLinkCommonPar
 export interface ServiceCommonProps {
     title: string;
     route: string;
+    links: any;
 }
 
 /**
@@ -24,7 +25,7 @@ export default class ServiceCommonWidget extends React.Component<ServiceCommonPr
         return (
             <SettingContents>
                 <ServiceListTitleParts title={this.props.title} />
-                <ServiceLinkCommonParts route={this.props.route}/>
+                <ServiceLinkCommonParts route={this.props.links.route} links={this.props.links}/>
             </SettingContents>
         );
     }

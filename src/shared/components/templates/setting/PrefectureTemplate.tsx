@@ -52,9 +52,9 @@ export default class PrefectureTemplate extends React.Component<PrefectureProps,
                     </Setting>
                 </div>
                 {/* ↓↓サイドメニュー↓↓ */}
-                <SubPageDrawerWidget />
-                <SubPageDrawerCoverWidget />
-                <SubPageDrawerBottunWidget />
+                <SubPageDrawerWidget showSidemenu={false} />
+                <SubPageDrawerCoverWidget showSidemenu={false} onClick="" />
+                <SubPageDrawerBottunWidget onClick="" />
                 {/* ↑↑サイドメニュー↑↑ */}
             </div>
         );

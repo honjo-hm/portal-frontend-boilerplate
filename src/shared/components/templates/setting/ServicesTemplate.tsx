@@ -3,6 +3,8 @@
  */
 import React from "react";
 
+import styled from 'styled-components'
+
 import { Setting } from "../../../style/setting/common";
 
 import ServiceCommonWidget from "../../widgets/setting/ServiceCommonWidget";
@@ -14,6 +16,16 @@ import SubPageDrawerCoverWidget from "../../widgets/setting/SubPageDrawerCoverWi
 import SubPageDrawerWidget from "../../widgets/setting/SubPageDrawerWidget";
 import SubPageHeaderWidget from "../../widgets/setting/SubPageHeaderWidget";
 
+const Contens = styled.div`
+overflow: hidden;
+min-height: 100%;
+position: relative;
+    &.on {
+        overflow: hidden;
+        min-height: 100%;
+        position: relative;
+    }
+`;
 
 /**
  * 初期値
@@ -40,6 +52,7 @@ interface SettingStates {
     weather: SettingState;
     fortune: SettingState;
     trains: SettingState[];
+    showSidemenu: boolean;
 }
 
 interface SettingState {
@@ -62,6 +75,7 @@ export default class ServicesTemplate extends React.Component<ServicesProps, Set
             weather,
             fortune,
             trains,
+            showSidemenu: false
         };
     }
 
@@ -81,6 +95,30 @@ export default class ServicesTemplate extends React.Component<ServicesProps, Set
 
         this.setState({trains: newTrains});
     }
+
+    /**
+     * サイドメニュー表示
+     *
+     * @param e
+     */
+    private onShowSidemenu(e) {
+        document.body.setAttribute("style", "overflow: hidden; height: 100%; width: 100%;");
+        this.setState({showSidemenu: true});
+    }
+
+    /**
+     * サイドメニュー非表示
+     *
+     * @param e
+     */
+    private onHiddenidemenu(e) {
+        document.body.removeAttribute("style");
+        this.setState({showSidemenu: false});
+    }
+
+    /**
+     * 
+     */
 
     /**
      * render
@@ -106,9 +144,17 @@ export default class ServicesTemplate extends React.Component<ServicesProps, Set
             };
         });
 
+        // サイドメニュー表示時のスタイル
+        const showSidemenuStyle: any = {
+            overflow: "hidden",
+            "min-height": "100%",
+            position: "relative"
+
+        }
+
         return (
             <div>
-                <div>
+                <Contens style={this.state.showSidemenu ? showSidemenuStyle : {}}>
                     {/* ヘッダー */}
                     <SubPageHeaderWidget title={this.props.title}/>
                     <Setting>
@@ -123,11 +169,11 @@ export default class ServicesTemplate extends React.Component<ServicesProps, Set
                         {/* その他設定 */}
                         <ServiceStaticWidget />
                     </Setting>
-                </div>
+                </Contens>
                 {/* ↓↓サイドメニュー↓↓ */}
-                <SubPageDrawerWidget />
-                <SubPageDrawerCoverWidget />
-                <SubPageDrawerBottunWidget />
+                <SubPageDrawerWidget showSidemenu={this.state.showSidemenu} />
+                <SubPageDrawerCoverWidget showSidemenu={this.state.showSidemenu} onClick={e => this.onHiddenidemenu(e)} />
+                <SubPageDrawerBottunWidget onClick={e => this.onShowSidemenu(e)} />
                 {/* ↑↑サイドメニュー↑↑ */}
             </div>
         );

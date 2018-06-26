@@ -66,9 +66,9 @@ export default class RegionTemplate extends React.Component<RegionProps, RegionS
                     </Setting>
                 </div>
                 {/* ↓↓サイドメニュー↓↓ */}
-                <SubPageDrawerWidget />
-                <SubPageDrawerCoverWidget />
-                <SubPageDrawerBottunWidget />
+                <SubPageDrawerWidget showSidemenu={false} />
+                <SubPageDrawerCoverWidget showSidemenu={false} onClick="" />
+                <SubPageDrawerBottunWidget onClick="" />
                 {/* ↑↑サイドメニュー↑↑ */}
             </div>
         );

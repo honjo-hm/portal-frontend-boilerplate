@@ -21,6 +21,11 @@ const DrawerCover = styled.div`
     z-index: 999;
     -webkit-tap-highlight-color: transparent;
 
+    &.on {
+        visibility: visible;
+        opacity: 1;
+    }
+
     &:after {
         content: '';
         z-index: 1001;
@@ -35,9 +40,16 @@ const DrawerCover = styled.div`
     }
 `;
 
+const shownStyle: any = {
+    width: "110%",
+    height: "640px",
+    visibility: "visible",
+    opacity: 1,
+};
+
 /**
  * parts
  */
-export const SubPageDrawerCoverParts = () => (
-    <DrawerCover />
+export const SubPageDrawerCoverParts = (props) => (
+    <DrawerCover style={props.showSidemenu ? shownStyle : {}} onClick={props.onClick} />
 );

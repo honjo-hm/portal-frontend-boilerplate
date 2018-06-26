@@ -57,9 +57,9 @@ export default class WeatherTemplate extends React.Component<WeatherProps, {}> {
                     </Setting>
                 </div>
                 {/* ↓↓サイドメニュー↓↓ */}
-                <SubPageDrawerWidget />
-                <SubPageDrawerCoverWidget />
-                <SubPageDrawerBottunWidget />
+                <SubPageDrawerWidget showSidemenu={false} />
+                <SubPageDrawerCoverWidget showSidemenu={false} onClick="" />
+                <SubPageDrawerBottunWidget onClick=""/>
                 {/* ↑↑サイドメニュー↑↑ */}
             </div>
         );

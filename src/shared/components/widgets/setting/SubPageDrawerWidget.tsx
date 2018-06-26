@@ -23,11 +23,11 @@ const DrawerSlide = styled.div`
     background-color: #fff;
 `;
 
-const DrawerModel = styled.div`
+const DrawerModal = styled.div`
     padding-bottom: 120px;
 `;
 
-const DrawerAd = styled.div`
+const DrawerAdBox = styled.div`
     min-height: 135px;
     text-align: center;
     position: relative;
@@ -58,16 +58,59 @@ const DrawerContents = styled.ul`
         height: auto;
         line-height: normal;
     }
+    & li a span {
+        position: static!important;
+        vertical-align: middle;
+        font-size: 10px;
+        display: inline-block;
+        margin-top: -2px;
+        margin-left: 5px!important;
+    }
     & li i {
         vertical-align: middle;
         margin: -5px 5px 0 0;
     }
 `;
 
+const showStyle: any = {
+    position: "absolute",
+    transform: "translate3d(240px, 0px, 0px)",
+    transition: "-webkit-transform 350ms cubic-bezier(0.04, 0.78, 0.11, 0.97)",
+    display: "block",
+};
+
+const hiddenStyle: any = {
+    position: "absolute",
+    transform: "translate3d(-240px, 0px, 0px)",
+    transition: "-webkit-transform 300ms cubic-bezier(0.611, 0.044, 0.983, 0.267)",
+    display: "none",
+};
+
+const modalStyle: any = {
+    "transition-timing-function": "cubic-bezier(0.1, 0.57, 0.1, 1)",
+    "transition-duration": "0ms",
+    transform: "translate(0px, 0px) translateZ(0px)"
+};
+
+/**
+ * props
+ */
+interface SubPageDrawerProps {
+    showSidemenu: boolean
+};
+
 /**
  * module
  */
-export default class SubPageDrawerWidget extends React.Component<{},{}> {
+export default class SubPageDrawerWidget extends React.Component<SubPageDrawerProps,{}> {
+    /**
+     * constructor
+     *
+     * @param props
+     */
+    constructor(props: SubPageDrawerProps) {
+        super(props);
+    }
     /**
      * サイドメニュー情報
      */
@@ -82,6 +125,81 @@ export default class SubPageDrawerWidget extends React.Component<{},{}> {
             link: "https://pass.auone.jp/main/?medid=spass_side&amp;srcid=none&amp;serial=smps",
             label: "auスマートパス"
         },
+        {
+            route: "",
+            link: "http://ac.ebis.ne.jp/tr_set.php?argument=WSwgvzTd&amp;ai=k01_130446",
+            label: "ビデオパス"
+        },
+        {
+            route: "",
+            link: "http://ac.ebis.ne.jp/tr_set.php?argument=WSwgvzTd&amp;ai=k01_82977",
+            label: "うたパス"
+        },
+        {
+            route: "",
+            link: "http://ac.ebis.ne.jp/tr_set.php?argument=WSwgvzTd&amp;ai=k01_92868",
+            label: "ブックパス"
+        },
+        {
+            route: "",
+            link: "http://disneypass.jp/spmn/",
+            label: "ディズニーパス<span>(C)Disney</span>"
+        },
+        {
+            route: "",
+            link: "https://game.auone.jp/",
+            label: "ゲーム"
+        },
+        {
+            route: "",
+            link: "https://pass.auone.jp/pass_member/?medid=spass_side&amp;srcid=none&amp;serial=smps",
+            label: "各種サービス入会・退会"
+        },
+        {
+            route: "",
+            link: "https://wallet.auone.jp/contents/sp/access/009_top.html",
+            label: "au WALLET"
+        },
+        {
+            route: "",
+            link: "https://wm.auone.jp/front/?trcd=AUSM151126&amp;islgin=true&amp;bid=wm-cb-sasm745",
+            label: "au WALLET Market"
+        },
+        {
+            route: "",
+            link: "https://wowma.jp/?aff_id=prt0001",
+            label: "ショッピング"
+        },
+        {
+            route: "",
+            link: "https://enjoy.point.auone.jp/gacha/?rf=Androidweb",
+            label: "ポイントガチャ"
+        },
+        {
+            route: "",
+            link: "http://www.au.kddi.com/electricity/",
+            label: "auでんき"
+        },
+        {
+            route: "",
+            link: "http://ac.ebis.ne.jp/tr_set.php?argument=WSwgvzTd&amp;ai=k01_156914",
+            label: "auのほけん・ローン"
+        },
+        {
+            route: "",
+            link: "https://www.au.com/support/?aid=cs-cs-support-0001",
+            label: "サポート"
+        },
+        {
+            route: "",
+            link: "http://www.au.kddi.com/",
+            label: "auホームページ"
+        },
+        {
+            route: "",
+            link: "https://sp-web.search.auone.jp/",
+            label: "検索"
+        },
     ];
 
     /**
@@ -91,12 +209,12 @@ export default class SubPageDrawerWidget extends React.Component<{},{}> {
         // TODO: parts化
         return (
             <Drawer>
-                <DrawerSlide>
-                    <div>
-                        <DrawerModel>
-                            <div>
+                <DrawerSlide style={this.props.showSidemenu ? showStyle : hiddenStyle}>
+                    <div style={{height: "640px"}}>
+                        <DrawerModal style={modalStyle}>
+                            <DrawerAdBox>
                                 <img src="//kimg.auone.jp/emu/dist/img/loading.gif" />
-                            </div>
+                            </DrawerAdBox>
                             <nav>
                                 <DrawerContents>
                                     {
@@ -108,92 +226,6 @@ export default class SubPageDrawerWidget extends React.Component<{},{}> {
                                             </li>
                                         })
                                     }
-
-                                    <li>
-                                        <a href="https://auone.jp/" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="au Webポータル">
-                                            <i></i>au WebポータルTOP
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://pass.auone.jp/main/?medid=spass_side&amp;srcid=none&amp;serial=smps" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="auスマートパス">
-                                            <i></i>auスマートパス
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://ac.ebis.ne.jp/tr_set.php?argument=WSwgvzTd&amp;ai=k01_130446" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="ビデオパス">
-                                            <i></i>ビデオパス
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://ac.ebis.ne.jp/tr_set.php?argument=WSwgvzTd&amp;ai=k01_82977" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="うたパス">
-                                            <i></i>うたパス
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://ac.ebis.ne.jp/tr_set.php?argument=WSwgvzTd&amp;ai=k01_92868" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="ブックパス">
-                                            <i></i>ブックパス
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://disneypass.jp/spmn/" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="ディズニーパス">
-                                            <i></i>ディズニーパス<span>(C)Disney</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://game.auone.jp/" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="ゲーム">
-                                            <i></i>ゲーム
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://pass.auone.jp/pass_member/?medid=spass_side&amp;srcid=none&amp;serial=smps" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="入退会">
-                                            <i></i>各種サービス入会・退会
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://wallet.auone.jp/contents/sp/access/009_top.html" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="auWALLET">
-                                            <i></i>au WALLET
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://wm.auone.jp/front/?trcd=AUSM151126&amp;islgin=true&amp;bid=wm-cb-sasm745" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="au WALLET Market">
-                                            <i></i>au WALLET Market
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://wowma.jp/?aff_id=prt0001" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="ショッピング">
-                                            <i></i>ショッピング
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://enjoy.point.auone.jp/gacha/?rf=Androidweb" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="ポイントガチャ">
-                                            <i></i>ポイントガチャ
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.au.kddi.com/electricity/" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="auでんき">
-                                            <i></i>auでんき
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://ac.ebis.ne.jp/tr_set.php?argument=WSwgvzTd&amp;ai=k01_156914" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="auのほけん・ローン">
-                                            <i></i>auのほけん・ローン
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.au.com/support/?aid=cs-cs-support-0001" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="サポート">
-                                            <i></i>サポート
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.au.kddi.com/" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="auホームページ">
-                                            <i></i>auホームページ
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://sp-web.search.auone.jp/" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="検索">
-                                            <i></i>検索
-                                        </a>
-                                    </li>
                                     <li>
                                         <a href="https://article.auone.jp/flash" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="ニュース">
                                             <i></i>ニュース
@@ -251,7 +283,7 @@ export default class SubPageDrawerWidget extends React.Component<{},{}> {
                                     </li>
                                 </DrawerContents>
                             </nav>
-                        </DrawerModel>
+                        </DrawerModal>
                     </div>
                 </DrawerSlide>
             </Drawer>

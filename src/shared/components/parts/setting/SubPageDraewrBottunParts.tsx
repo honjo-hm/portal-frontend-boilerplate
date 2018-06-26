@@ -22,15 +22,8 @@ const DrawerBot = styled.div`
 `;
 
 /**
- * script
- */
-const onClickSubPageDrawerBottun = (e) => {
-    console.log(e);
-};
-
-/**
  * parts
  */
-export const SubPageDraewrBottunParts = () => (
-    <DrawerBot onClick={e => onClickSubPageDrawerBottun(e)}></DrawerBot>
+export const SubPageDraewrBottunParts = (props) => (
+    <DrawerBot onClick={props.onClick}></DrawerBot>
 );

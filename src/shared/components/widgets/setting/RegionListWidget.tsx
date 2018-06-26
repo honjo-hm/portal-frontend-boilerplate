@@ -30,6 +30,18 @@ export interface RegionListProps {
  * module
  */
 export default class RegionListWidget extends React.Component<RegionListProps, {}> {
+    /**
+     * constructor
+     *
+     * @param props
+     */
+    constructor(props: RegionListProps) {
+        super(props);
+    }
+
+    /**
+     * render
+     */
     public render(): React.ReactNode {
         const route: string = this.props.route;
         

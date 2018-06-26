@@ -9,13 +9,11 @@ import { SettingLinkText, ServiceLinkAncher } from "../../../style/setting/parts
 import { Link } from "../../../routes/index";
 
 
-/**
- * parts
- */
 export const ServiceLinkStaticParts = (props) => (
     <SettingLinkText>
         {(() => {
             if (props.link) {
+                // 外部サイトへのリンク
                 return (
                     <ServiceLinkAncher href={props.link}>
                         <span>{props.label}</span>

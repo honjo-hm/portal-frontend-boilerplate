@@ -20,10 +20,16 @@ export interface PrefectureListProps {
  * module
  */
 export default class PrefectureListWidget extends React.Component<PrefectureListProps, {}> {
+    /**
+     * 都道府県リスト取得
+     */
     private getPrefectures() {
         return this.callPref();
     }
 
+    /**
+     * TODO: 仮データ
+     */
     private callPref() {
         return {
             "36": "徳島県",
@@ -33,6 +39,9 @@ export default class PrefectureListWidget extends React.Component<PrefectureList
         };
     }
 
+    /**
+     * render
+     */
     public render(): React.ReactNode {
         const route: string = this.props.route;
         const regionCode = this.props.code;

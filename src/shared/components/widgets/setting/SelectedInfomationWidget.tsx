@@ -17,6 +17,18 @@ export interface RegionInfomationProps {
  * module
  */
 export default class SelectedInfomationWidget extends React.Component<RegionInfomationProps, {}> {
+    /**
+     * constructor
+     *
+     * @param props 
+     */
+    constructor(props: RegionInfomationProps) {
+        super(props);
+    }
+
+    /**
+     * render
+     */
     public render(): React.ReactNode {
         return (
             <SettingLead>

@@ -9,6 +9,9 @@ import { SettingDescriptionParts } from "../../parts/setting/SettingDescriptionP
  * module
  */
 export default class SettingDescriptionWidget extends React.Component<{}, {}> {
+    /**
+     * render
+     */
     public render(): React.ReactNode {
         return (
             <SettingDescriptionParts />

@@ -50,8 +50,14 @@ interface SettingState {
  * module
  */
 export default class ServicesTemplate extends React.Component<ServicesProps, SettingStates> {
-    constructor(props) {
+    /**
+     * construct
+     * 
+     * @param props
+     */
+    constructor(props: ServicesProps) {
         super(props);
+        // state初期化
         this.state = {
             weather,
             fortune,
@@ -59,7 +65,11 @@ export default class ServicesTemplate extends React.Component<ServicesProps, Set
         };
     }
 
-    // 路線クリア
+    /**
+     * 路線クリア処理
+     *
+     * @param e
+     */
     private onClearTrains(e)
     {
         // TODO: cookie削除
@@ -72,24 +82,45 @@ export default class ServicesTemplate extends React.Component<ServicesProps, Set
         this.setState({trains: newTrains});
     }
 
+    /**
+     * render
+     */
     public render(): React.ReactNode {
 
-        // 設定値
-        const weatherInfo: {[key: string]: string} = {prefix: "", label: this.state.weather.label, route:"settingWeatherRegion"};
-        const fortuneInfo: {[key: string]: string} = {prefix: "", label: this.state.fortune.label, route:"index"};
+        // 各サービスの表示内容
+        const weatherInfo: {[key: string]: string} = {
+            prefix: "",
+            label: this.state.weather.label,
+            route:"settingWeatherRegion"
+        };
+        const fortuneInfo: {[key: string]: string} = {
+            prefix: "",
+            label: this.state.fortune.label,
+            route:"index"
+        };
         const trainInfo: {[key: string]: string}[] = this.state.trains.map((train, index) => {
-            return {prefix: `路線${index + 1}  `, label: train.label, route:"index"};
+            return {
+                prefix: `路線${index + 1}  `,
+                label: train.label,
+                route:"index"
+            };
         });
 
         return (
             <div>
                 <div>
+                    {/* ヘッダー */}
                     <SubPageHeaderWidget title={this.props.title}/>
                     <Setting>
+                        {/* 説明分 */}
                         <SettingDescriptionWidget />
+                        {/* 天気設定 */}
                         <ServiceCommonWidget title="天気設定" route="settingWeatherRegion" links={weatherInfo} />
+                        {/* 占い設定 */}
                         <ServiceCommonWidget title="占い設定" route="index" links={fortuneInfo} />
+                        {/* 路線設定 */}
                         <ServiceTrainWidget title="路線設定" links={trainInfo} onClick={e => this.onClearTrains(e)} />
+                        {/* その他設定 */}
                         <ServiceStaticWidget />
                     </Setting>
                 </div>

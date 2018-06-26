@@ -30,14 +30,23 @@ interface RegionState {
  * module
  */
 export default class RegionTemplate extends React.Component<RegionProps, RegionState> {
-    constructor(props) {
+    /**
+     * constructor
+     *
+     * @param props 
+     */
+    constructor(props: RegionProps) {
         super(props);
         this.state = {
             label: "未設定"
         };
     }
 
+    /**
+     * render
+     */
     public render(): React.ReactNode {
+        // 表示情報
         const information: any = {
             route: "settingServices",
             discription: "地域",
@@ -47,9 +56,12 @@ export default class RegionTemplate extends React.Component<RegionProps, RegionS
         return (
             <div>
                 <div>
+                    {/* ヘッダー */}
                     <SubPageHeaderWidget title={this.props.title}/>
                     <Setting>
+                        {/* 設定状況 */}
                         <AreaInfomationWidget information={information} />
+                        {/* 地域リスト */}
                         <RegionListWidget route="settingWeatherPrefecture" />
                     </Setting>
                 </div>

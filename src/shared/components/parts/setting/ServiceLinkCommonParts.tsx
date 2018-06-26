@@ -8,9 +8,7 @@ import { SettingLinkText, ServiceLinkAncher } from "../../../style/setting/parts
 //@ts-ignore
 import { Link } from "../../../routes/index";
 
-/**
- * parts
- */
+
 export const ServiceLinkCommonParts = (props) => (
     <SettingLinkText>
         <Link route={props.links.route}>

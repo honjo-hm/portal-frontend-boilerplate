@@ -43,10 +43,18 @@ injectGlobal`
  * module
  */
 export default class SubPageHeaderWidget extends React.Component<SubPageHeaderProps, {}> {
-    constructor (props: SubPageHeaderProps) {
+    /**
+     * constructor
+     *
+     * @param props
+     */
+    constructor(props: SubPageHeaderProps) {
         super(props);
     }
 
+    /**
+     * render
+     */
     public render(): React.ReactNode {
         return (
             <header>

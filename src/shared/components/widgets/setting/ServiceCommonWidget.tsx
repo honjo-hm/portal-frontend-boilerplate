@@ -21,6 +21,18 @@ export interface ServiceCommonProps {
  * module
  */
 export default class ServiceCommonWidget extends React.Component<ServiceCommonProps, {}> {
+    /**
+     * constructor
+     *
+     * @param props
+     */
+    constructor(props: ServiceCommonProps) {
+        super(props);
+    }
+
+    /**
+     * render
+     */
     public render(): React.ReactNode {
         return (
             <SettingContents>

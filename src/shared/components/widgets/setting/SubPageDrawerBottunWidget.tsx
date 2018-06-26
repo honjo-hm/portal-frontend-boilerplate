@@ -9,7 +9,9 @@ import { SubPageDraewrBottunParts } from "../../parts/setting/SubPageDraewrBottu
  * module
  */
 export default class SubPageDrawerBottunWidget extends React.Component<{}, {}> {
-
+    /**
+     * render
+     */
     public render(): React.ReactNode {
         return (
             <SubPageDraewrBottunParts />

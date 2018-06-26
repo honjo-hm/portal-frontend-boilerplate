@@ -12,10 +12,16 @@ import { AreaSetButtonParts } from "../../parts/setting/AreaSetButtonParts";
  * module
  */
 export default class CityListWidget extends React.Component<{}, {}> {
+    /**
+     * 市区町村リスト取得
+     */
     private getCities() {
         return this.callPref();
     }
 
+    /**
+     * TODO: 仮データ
+     */
     private callPref() {
         return {
             "37201": "高松市",
@@ -24,6 +30,9 @@ export default class CityListWidget extends React.Component<{}, {}> {
         };
     }
 
+    /**
+     * render
+     */
     public render(): React.ReactNode {
         const cities = this.getCities();
         let list: any = [];

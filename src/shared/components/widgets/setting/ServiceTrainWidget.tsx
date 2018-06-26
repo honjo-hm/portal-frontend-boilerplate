@@ -32,7 +32,18 @@ export interface ServiceTrainProps {
  * module
  */
 export default class ServiceTrainWidget extends React.Component<ServiceTrainProps, {}> {
+    /**
+     * constructor
+     *
+     * @param props
+     */
+    constructor(props: ServiceTrainProps) {
+        super(props);
+    }
 
+    /**
+     * render
+     */
     public render(): React.ReactNode {
         return (
             <SettingContents>
@@ -42,6 +53,7 @@ export default class ServiceTrainWidget extends React.Component<ServiceTrainProp
                         return <ServiceLinkCommonParts links={link}/>
                     })
                 }
+                {/* クリアボタン */}
                 <ClearButtonTrainParts onClick={this.props.onClick} />
             </SettingContents>
         );

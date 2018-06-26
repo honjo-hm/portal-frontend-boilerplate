@@ -6,9 +6,6 @@ import React from "react";
 import { SettingTitle, SettingTitleText } from "../../../style/setting/parts";
 
 
-/**
- * parts
- */
 export const ServiceListTitleParts = (props) => (
     <SettingTitle>
         <SettingTitleText>{props.title}</SettingTitleText>

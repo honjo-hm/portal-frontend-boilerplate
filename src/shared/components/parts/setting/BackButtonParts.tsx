@@ -9,9 +9,6 @@ import { SettingLeadBackLink } from "../../../style/setting/parts";
 import { Link } from "../../../routes/index";
 
 
-/**
- * parts
- */
 export const BackBottunParts = (props) => (
     <SettingLeadBackLink>
     {(() => {

@@ -26,6 +26,18 @@ interface InformationProps {
  * module
  */
 export default class AreaInfomationWidget extends React.Component<AreaInfomationProps, {}> {
+    /**
+     * constructor
+     *
+     * @param props 
+     */
+    constructor(props: AreaInfomationProps) {
+        super(props);
+    }
+
+    /**
+     * render
+     */
     public render(): React.ReactNode {
         return (
             <SettingLead>

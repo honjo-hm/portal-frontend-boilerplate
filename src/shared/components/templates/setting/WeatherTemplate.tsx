@@ -22,9 +22,21 @@ interface WeatherProps {
 /**
  * module
  */
-export default class WeatherTemplate extends React.Component<WeatherProps> {
-    public render(): React.ReactNode {
+export default class WeatherTemplate extends React.Component<WeatherProps, {}> {
+    /**
+     * constructor
+     *
+     * @param props
+     */
+    constructor(props: WeatherProps) {
+        super(props);
+    }
 
+    /**
+     * render
+     */
+    public render(): React.ReactNode {
+        // TODO: 仮で値を設定しておく
         const regionCode = "02";
         const informationLabel = "埼玉";
         const backParams = {
@@ -35,9 +47,12 @@ export default class WeatherTemplate extends React.Component<WeatherProps> {
         return (
             <div>
                 <div>
+                    {/* ヘッダー */}
                     <SubPageHeaderWidget title={this.props.title}/>
                     <Setting>
+                        {/* 設定状況 */}
                         <SelectedInfomationWidget label={informationLabel} route="settingWeatherPrefecture" params={backParams} />
+                        {/* 市区町村リスト */}
                         <CityListWidget  />
                     </Setting>
                 </div>

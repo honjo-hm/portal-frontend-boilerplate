@@ -9,7 +9,9 @@ import { SubPageDrawerCoverParts } from "../../parts/setting/SubPageDrawerCoverP
  * module
  */
 export default class SubPageDrawerCoverWidget extends React.Component<{},{}> {
-
+    /**
+     * render
+     */
     public render(): React.ReactNode {
         return (
             <SubPageDrawerCoverParts />

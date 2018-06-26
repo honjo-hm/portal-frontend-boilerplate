@@ -12,6 +12,9 @@ import { ServiceLinkStaticParts } from "../../parts/setting/ServiceLinkStaticPar
  * module
  */
 export default class ServiceStaticWidget extends React.Component<{}, {}> {
+    /**
+     * render
+     */
     public render(): React.ReactNode {
         return (
             <SettingContents>

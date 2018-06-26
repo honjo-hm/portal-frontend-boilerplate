@@ -68,7 +68,9 @@ const DrawerContents = styled.ul`
  * module
  */
 export default class SubPageDrawerWidget extends React.Component<{},{}> {
-
+    /**
+     * サイドメニュー情報
+     */
     static readonly SIDEMENU_LIST: {[key: string]: string}[] = [
         {
             route: "index",
@@ -82,6 +84,9 @@ export default class SubPageDrawerWidget extends React.Component<{},{}> {
         },
     ];
 
+    /**
+     * render
+     */
     public render(): React.ReactNode {
         // TODO: parts化
         return (

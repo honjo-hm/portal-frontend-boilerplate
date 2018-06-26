@@ -23,20 +23,31 @@ interface PrefectureProps {
 /**
  * module
  */
-export default class PrefectureTemplate extends React.Component<PrefectureProps, any> {
-    constructor(props, context) {
+export default class PrefectureTemplate extends React.Component<PrefectureProps, {}> {
+    /**
+     * constructor
+     *
+     * @param props
+     */
+    constructor(props: PrefectureProps) {
         super(props);
     }
 
+    /**
+     * render
+     */
     public render(): React.ReactNode {
-
+        // TODO: 仮で値を設定しておく
         const regionCode = "02";
         return (
             <div>
                 <div>
+                    {/* ヘッダー */}
                     <SubPageHeaderWidget title={this.props.title}/>
                     <Setting>
+                        {/* 設定状況 */}
                         <SelectedInfomationWidget label={REGION_LIST[regionCode]} route="settingWeatherRegion" params={{}} />
+                        {/* 都道府県リスト */}
                         <PrefectureListWidget route="settingWeatherCity" code={regionCode} />
                     </Setting>
                 </div>

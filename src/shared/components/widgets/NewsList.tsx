@@ -22,7 +22,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/1_1_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/1/1/82_1_r_20180625_1529918061653085",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "l"
     },
     {
         id: "154_841238",
@@ -43,7 +44,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/76_9_r_20180625_1529897783410280",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "m"
     },
     {
         id: "154_841120",
@@ -64,7 +66,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/108_9_r_20180625_1529894732062623",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "m"
     },
     {
         id: "154_839355",
@@ -85,7 +88,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/17_9_r_20180624_1529805892058618",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "s"
     },
     {
         id: "154_836747",
@@ -106,7 +110,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/36_9_r_20180622_1529662262877333",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "s"
     },
     {
         id: "154_833813",
@@ -127,7 +132,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/20_9_r_20180621_1529550112185100",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "s"
     },
     {
         id: "154_833821",
@@ -148,7 +154,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/81_9_r_20180621_1529550222417888",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "s"
     },
     {
         id: "154_830983",
@@ -169,7 +176,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/8_9_r_20180620_1529440881681287",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "s"
     },
     {
         id: "154_830763",
@@ -190,7 +198,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/1_1_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/1/1/37_1_r_20180620_1529420511853368",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "s"
     },
     {
         id: "154_821678",
@@ -211,7 +220,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/1_1_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/1/1/58_1_r_20180615_1529024464004650",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "s"
     },
     {
         id: "154_818254",
@@ -232,7 +242,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/81_9_r_20180613_1528877001669824",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "s"
     },
     {
         id: "154_817531",
@@ -253,7 +264,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/100_9_r_20180613_1528855212526711",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "s"
     },
     {
         id: "154_812007",
@@ -274,7 +286,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/77_9_r_20180610_1528597902816742",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "s"
     },
     {
         id: "154_811502",
@@ -295,7 +308,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/77_9_r_20180610_1528560152729943",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "s"
     },
     {
         id: "154_809496",
@@ -316,7 +330,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/1_1_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/1/1/37_1_r_20180608_1528453542350103",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "s"
     },
     {
         id: "154_808557",
@@ -337,7 +352,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/81_9_r_20180608_1528424302487976",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "s"
     },
     {
         id: "154_808405",
@@ -358,7 +374,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/20_9_r_20180608_1528420342498788",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "s"
     },
     {
         id: "154_806680",
@@ -379,7 +396,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/81_9_r_20180607_1528347872020550",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "s"
     },
     {
         id: "154_805102",
@@ -400,7 +418,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/1_1_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/1/1/42_1_r_20180606_1528275702792820",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "ss"
     },
     {
         id: "154_804524",
@@ -421,7 +440,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/81_9_r_20180606_1528255143673084",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "ss"
     },
     {
         id: "154_803389",
@@ -442,7 +462,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/81_9_r_20180605_1528200342122678",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "ss"
     },
     {
         id: "154_801973",
@@ -463,7 +484,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/81_9_r_20180605_1528156122244189",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "ss"
     },
     {
         id: "154_801286",
@@ -484,7 +506,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/88_9_r_20180604_1528111121936780",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "ss"
     },
     {
         id: "154_801080",
@@ -506,7 +529,8 @@ const newsItems = [
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
         url: "https://stg.article.auone.jp/detail/1/5/9/36_9_r_20180604_1528103852625863",
         keyword_id: "154",
-        keyword_name: "安室奈美恵"
+        keyword_name: "安室奈美恵",
+        size: "ss"
 
     }
 ];
@@ -533,7 +557,8 @@ interface NewsListItemState {
     l_filler: string,
     url: string,
     keyword_id: string,
-    keyword_name: string
+    keyword_name: string,
+    size: string,
 }
 
 interface NewsListItemsState {

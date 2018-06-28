@@ -5,12 +5,11 @@ import styled from "styled-components";
 
 const NewsThumbnail = styled.div`
     position: relative;
-    width: 50px;
-    height: 50px;
     background-position: center top;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
+    height: 153px;
     overflow: hidden;
 
     & img {

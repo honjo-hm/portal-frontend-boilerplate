@@ -1,10 +1,10 @@
 import React from "react";
-import { NewsParts } from "./NewsParts";
+import { NewsDivide } from "./NewsDivide";
 
 export const NewsItems = (props) => (
     <ul>
         {props.newsItems.map((newsItem) => (
-            <NewsParts key={`newsItem${newsItem.id}`} newsItem={newsItem}></NewsParts>
+            <NewsDivide key={`newsItem${newsItem.id}`} newsItem={newsItem}></NewsDivide>
         ))}
     </ul>
 );

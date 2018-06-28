@@ -22,6 +22,8 @@ const NewsLink = styled.a`
     position: relative;
     -webkit-box-align: center;
     padding: 3px 0;
+    text-decoration: none;
+    color: #3c3c3c;
 `;
 
 const NewsText = styled.div`
@@ -37,9 +39,10 @@ const NewsSubText = styled.div`
 
 export const NewsParts = (props) => (
     <NewsItem>
-        <NewsLink>
+        <NewsLink href={props.newsItem.url}>
             <Thumbnail newsItem={props.newsItem.s_thumbnail} />
             <NewsText>
+                {props.imageSize}
                 <Title newsItem={props.newsItem.title} />
                 <NewsSubText>
                     <Label />

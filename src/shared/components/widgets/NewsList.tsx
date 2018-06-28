@@ -507,6 +507,7 @@ const newsItems = [
         url: "https://stg.article.auone.jp/detail/1/5/9/36_9_r_20180604_1528103852625863",
         keyword_id: "154",
         keyword_name: "安室奈美恵"
+
     }
 ];
 
@@ -544,7 +545,7 @@ export default class NewsList extends React.Component<{}, NewsListItemsState> {
     constructor(props) {
         super(props);
         this.state = {
-            newsItems,
+            newsItems
         };
     }
 

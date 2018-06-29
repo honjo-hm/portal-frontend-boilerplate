@@ -7,16 +7,23 @@ import { Label } from "./news_parts/Label";
 import { Thumbnail } from "./news_parts/Thumbnail";
 
 const NewsLink = styled.a`
-    display: block;
-    padding: 7px 10px 0;
-    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: box;   
+    position: relative;
+    -webkit-box-align: center;
+    padding: 3px 0;
     text-decoration: none;
     color: #3c3c3c;
+
+    .news__items--col2 {
+        width: 50%;
+    }
 `;
 
-const NewsItem_thumbnail_laege = styled.div`
+const NewsItemThumbnailCol2  = styled.div`
     position: relative;
-    padding-top: 43.33%;
+    padding-top: 75%;
     box-sizing: border-box;
     border: 1px solid #d8d8d8;
     overflow: hidden;
@@ -38,15 +45,11 @@ const NewsItem_thumbnail_laege = styled.div`
         left: 50%;
         transform: translate(-50%, 0);
     }
-
 `;
 
 const NewsText = styled.div`
-    padding: 7px 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    overflow: hidden;
-    line-height: 1.2;
+    -webkit-box-flex: 1;
+    padding: 3px 0 3px 5px;
 `;
 
 const NewsSubText = styled.div`
@@ -55,18 +58,20 @@ const NewsSubText = styled.div`
     font-size: 10px;
 `;
 
-export const NewsPartsL = (props) => (
+export const NewsPartsCol2 = (props) => (
     <NewsLink href={props.newsItem.url}>
-        <NewsItem_thumbnail_laege>
-            <Thumbnail newsItem={props.newsItem.l_thumbnail} />
-        </NewsItem_thumbnail_laege>
-        <NewsText>
-            <Title newsItem={props.newsItem.title} />
-            <NewsSubText>
-                <Label />
-                <Lastupdate newsItem={props.newsItem.updated_date} />
-                <ServiceName newsItem={props.newsItem.credit} />
-            </NewsSubText>
-        </NewsText>
+        <div className="news__items--col2">
+            <NewsItemThumbnailCol2>
+                <Thumbnail newsItem={props.newsItem.m_thumbnail} />
+            </ NewsItemThumbnailCol2>
+            <NewsText>
+                <Title newsItem={props.newsItem.title} />
+                <NewsSubText>
+                    <Label />
+                    <Lastupdate newsItem={props.newsItem.updated_date} />
+                    <ServiceName newsItem={props.newsItem.credit} />
+                </NewsSubText>
+            </NewsText>
+        </div>
     </NewsLink>
 );

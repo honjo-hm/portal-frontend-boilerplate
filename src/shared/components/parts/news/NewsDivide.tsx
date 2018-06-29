@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { NewsPartsSS } from "./NewsPartsSS";
+import { NewsPartsCol2 } from "./NewsPartsCol2";
 import { NewsPartsS } from "./NewsPartsS";
 import { NewsPartsM } from "./NewsPartsM";
 import { NewsPartsL } from "./NewsPartsL";
@@ -14,17 +14,13 @@ const NewsItem = styled.li`
     clear: left;
 `;
 
-/*
-* 記事のサイズを出し分ける
-*/
-
 export const NewsDivide = (props) => (
     <NewsItem>
         {(() => {
-            if (props.newsItem.size === 'ss') {
-                return <NewsPartsSS newsItem={props.newsItem} />;
-            } else if (props.newsItem.size === 's') {
+            if (props.newsItem.size === 's') {
                 return <NewsPartsS newsItem={props.newsItem} />;
+            } else if (props.newsItem.size === 'col2') {
+                return <NewsPartsCol2 newsItem={props.newsItem} />;
             } else if (props.newsItem.size === 'm') {
                 return <NewsPartsM newsItem={props.newsItem} />;
             } else if (props.newsItem.size === 'l') {

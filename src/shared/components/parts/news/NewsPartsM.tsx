@@ -17,6 +17,34 @@ const NewsLink = styled.a`
     color: #3c3c3c;
 `;
 
+const NewsItemThumbnailMedium = styled.div`
+    position: relative;
+    width: 70px;
+    height: 70px;
+    box-sizing: border-box;
+    border: 1px solid #d8d8d8;
+    overflow: hidden;
+
+    &::before {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #e9e9e9;
+        content: '';
+    }
+
+    span {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+`;
+
 const NewsText = styled.div`
     -webkit-box-flex: 1;
     padding: 3px 0 3px 5px;
@@ -30,7 +58,9 @@ const NewsSubText = styled.div`
 
 export const NewsPartsM = (props) => (
     <NewsLink href={props.newsItem.url}>
-        <Thumbnail newsItem={props.newsItem.m_thumbnail} />
+        <NewsItemThumbnailMedium>
+            <Thumbnail newsItem={props.newsItem.s_thumbnail} />
+        </NewsItemThumbnailMedium>
         <NewsText>
             <Title newsItem={props.newsItem.title} />
             <NewsSubText>

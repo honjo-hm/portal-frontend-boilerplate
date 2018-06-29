@@ -45,7 +45,7 @@ const newsItems = [
         url: "https://stg.article.auone.jp/detail/1/5/9/76_9_r_20180625_1529897783410280",
         keyword_id: "154",
         keyword_name: "安室奈美恵",
-        size: "m"
+        size: "col2"
     },
     {
         id: "154_841120",
@@ -67,7 +67,7 @@ const newsItems = [
         url: "https://stg.article.auone.jp/detail/1/5/9/108_9_r_20180625_1529894732062623",
         keyword_id: "154",
         keyword_name: "安室奈美恵",
-        size: "m"
+        size: "col2"
     },
     {
         id: "154_839355",
@@ -89,7 +89,7 @@ const newsItems = [
         url: "https://stg.article.auone.jp/detail/1/5/9/17_9_r_20180624_1529805892058618",
         keyword_id: "154",
         keyword_name: "安室奈美恵",
-        size: "s"
+        size: "m"
     },
     {
         id: "154_836747",
@@ -111,7 +111,7 @@ const newsItems = [
         url: "https://stg.article.auone.jp/detail/1/5/9/36_9_r_20180622_1529662262877333",
         keyword_id: "154",
         keyword_name: "安室奈美恵",
-        size: "s"
+        size: "m"
     },
     {
         id: "154_833813",
@@ -133,7 +133,7 @@ const newsItems = [
         url: "https://stg.article.auone.jp/detail/1/5/9/20_9_r_20180621_1529550112185100",
         keyword_id: "154",
         keyword_name: "安室奈美恵",
-        size: "s"
+        size: "m"
     },
     {
         id: "154_833821",
@@ -155,7 +155,7 @@ const newsItems = [
         url: "https://stg.article.auone.jp/detail/1/5/9/81_9_r_20180621_1529550222417888",
         keyword_id: "154",
         keyword_name: "安室奈美恵",
-        size: "s"
+        size: "m"
     },
     {
         id: "154_830983",
@@ -177,7 +177,7 @@ const newsItems = [
         url: "https://stg.article.auone.jp/detail/1/5/9/8_9_r_20180620_1529440881681287",
         keyword_id: "154",
         keyword_name: "安室奈美恵",
-        size: "s"
+        size: "m"
     },
     {
         id: "154_830763",
@@ -199,7 +199,7 @@ const newsItems = [
         url: "https://stg.article.auone.jp/detail/1/1/1/37_1_r_20180620_1529420511853368",
         keyword_id: "154",
         keyword_name: "安室奈美恵",
-        size: "s"
+        size: "m"
     },
     {
         id: "154_821678",

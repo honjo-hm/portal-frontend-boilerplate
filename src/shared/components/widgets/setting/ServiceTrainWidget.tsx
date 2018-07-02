@@ -49,8 +49,8 @@ export default class ServiceTrainWidget extends React.Component<ServiceTrainProp
             <SettingContents>
                 <ServiceListTitleParts title={this.props.title} />
                 {
-                    this.props.links.map((link) => {
-                        return <ServiceLinkCommonParts links={link}/>
+                    this.props.links.map((link: any, index: number) => {
+                        return <ServiceLinkCommonParts key={index} links={link}/>
                     })
                 }
                 {/* クリアボタン */}

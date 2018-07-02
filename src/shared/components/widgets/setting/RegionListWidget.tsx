@@ -53,7 +53,7 @@ export default class RegionListWidget extends React.Component<RegionListProps, {
                     regionCode: key
                 }
             }
-            list.push(<AreaSelectButtonParts route={route} area={area} />);
+            list.push(<AreaSelectButtonParts key={key} route={route} area={area} />);
         }
 
         return (

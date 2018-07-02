@@ -56,7 +56,7 @@ export default class PrefectureListWidget extends React.Component<PrefectureList
                     prefCode: key
                 }
             };
-            list.push(<AreaSelectButtonParts route={route} area={area} />);
+            list.push(<AreaSelectButtonParts key={key} route={route} area={area} />);
         }
 
         return (

@@ -218,8 +218,8 @@ export default class SubPageDrawerWidget extends React.Component<SubPageDrawerPr
                             <nav>
                                 <DrawerContents>
                                     {
-                                        SubPageDrawerWidget.SIDEMENU_LIST.map((item: {[key: string]: string}) => {
-                                            return <li>
+                                        SubPageDrawerWidget.SIDEMENU_LIST.map((item: {[key: string]: string}, index: number) => {
+                                            return <li key={index}>
                                                 <a href={item.link} data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label={item.label}>
                                                     <i></i>{item.label}
                                                 </a>

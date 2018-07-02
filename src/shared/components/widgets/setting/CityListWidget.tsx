@@ -40,7 +40,7 @@ export default class CityListWidget extends React.Component<{}, {}> {
         for (let key in cities) {
             console.log(key);
             let area = {name: cities[key], code: key}
-            list.push(<AreaSetButtonParts area={area} />);
+            list.push(<AreaSetButtonParts key={key} area={area} />);
         }
     
         return (

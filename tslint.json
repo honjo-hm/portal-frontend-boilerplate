@@ -29,6 +29,10 @@
         "allow-declarations",
         "allow-named-functions"
     ],
+    "no-import-side-effect": false,
+    "strict-boolean-expressions": false,
+    "no-unnecessary-class": false,
+    "arrow-parens": false,
     "no-submodule-imports": false,
     "no-implicit-dependencies": false,
     "completed-docs": true,
@@ -67,7 +71,6 @@
     ],
     "no-console": [false, "log", "error"],
     "no-switch-case-fall-through": true,
-    "strict-boolean-expressions": [true, "allow-boolean-or-undefined"],
     "switch-default": false,
     "variable-name": [true,
       "ban-keywords",

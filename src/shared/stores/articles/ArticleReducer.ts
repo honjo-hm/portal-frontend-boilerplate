@@ -9,15 +9,20 @@
  */
 import { Reducer, AnyAction } from "redux";
 import { InitialArticleState, ArticleState, ArticleStateType } from "./ArticleState";
+import { ArticleAction } from "./ArticleAction";
 
 /**
  * articleReducer
  * action typeを見てstateを返してあげる役
- * 
+ *
  * @author hoge(hoge@mediba.jp)
  */
 export const articleReducer: Reducer<ArticleState> = (
     state: ArticleState = InitialArticleState, action: AnyAction): ArticleState => {
+
+    // reducerの引数 action だとArticleAction型でtype hint出来ないので
+    // ここで明示的にキャストする
+    const articleAction = action as ArticleAction;
 
     /**
      * よく見るswitch
@@ -35,7 +40,7 @@ export const articleReducer: Reducer<ArticleState> = (
         case ArticleStateType.LOADED:
             return {
                 ...state,
-                articles: action.articles,
+                articles: articleAction.articles,
                 type: ArticleStateType.LOADED,
             };
 

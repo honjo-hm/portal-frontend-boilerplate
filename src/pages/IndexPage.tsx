@@ -5,12 +5,12 @@
  * @since 2018.XX.XX
  * @copyright mediba.inc
  */
-// import "./_bootstrap";
+import "./_bootstrap";
 import { connect } from "react-redux";
-import { Store, AnyAction } from "redux";
-import { RootState } from "../shared/stores/RootState";
+// import { Store, AnyAction } from "redux";
+// import { RootState } from "../shared/stores/RootState";
 import { IndexContainer } from "../shared/components/containers/IndexContainer";
-import { ArticleAction, loadedAction } from "../shared/stores/articles/ArticleAction";
+import { loadedAction } from "../shared/stores/articles/ArticleAction";
 
 /**
  * 本体
@@ -24,21 +24,17 @@ export default connect(state => state)(class extends IndexContainer {
     /**
      * getInitialProps from next-redux-wrapper
      * 子componentのconstructorより先に呼ばれる
-     * 
+     *
      * @param Store<RootState> store
      * @param boolean isServer
-     * 
+     *
      * @returns Promise<any> props
      */
-    public static async getInitialProps(
-        { store, isServer }: { store: Store<RootState>, isServer: boolean }): Promise<any> {
+    public static async getInitialProps({ store, isServer }: { store; isServer: boolean }) {
 
         console.log(store.getState());
 
         if (isServer) {
-            // TODO: エラーが出るけど普通にトランスパイルできるし動く
-            // 原因がわからない・・・とにかくignoreするのは嫌だ
-
             store.dispatch(loadedAction(["hoge", "fuga"]));
         }
 

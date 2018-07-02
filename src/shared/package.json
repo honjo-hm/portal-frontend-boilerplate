@@ -36,6 +36,7 @@
     "isomorphic-unfetch": "^2.0.0",
     "loadable-components": "^2.1.0",
     "lusca": "^1.6.0",
+    "map-like": "^2.0.0",
     "material-ui": "^0.20.1",
     "mysql2": "^1.5.3",
     "next": "^6.0.2",

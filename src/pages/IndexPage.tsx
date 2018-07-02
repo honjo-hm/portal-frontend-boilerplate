@@ -6,11 +6,7 @@
  * @copyright mediba.inc
  */
 import "./bootstrap";
-import styled from "styled-components";
-
-//@ts-ignore
-import { Link } from "../shared/routes/index";
-import News from "../shared/components/widgets/News";
+import IndexTemplate from "../shared/components/templates/IndexTemplate";
 
 /**
  * 以下ちゃんとlibraryとして切り出す
@@ -42,17 +38,4 @@ client.request(query).then((data) => {
 */
 
 
-export default () => (
-    <div>
-        <div>
-            <h2>Hello Index</h2>
-            <ul>
-                <Link route="settings"><a>settings</a></Link>
-            </ul>
-        </div>
-        <div>
-            <News />
-        </div>
-    </div>
-)
-
+export default () => <IndexTemplate />;

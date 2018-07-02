@@ -200,6 +200,61 @@ export default class SubPageDrawerWidget extends React.Component<SubPageDrawerPr
             link: "https://sp-web.search.auone.jp/",
             label: "検索"
         },
+        {
+            route: "",
+            link: "https://article.auone.jp/flash",
+            label: "ニュース"
+        },
+        {
+            route: "",
+            link: "https://tenki.auone.jp/",
+            label: "天気"
+        },
+        {
+            route: "",
+            link: "http://fortune.auone.jp/",
+            label: "占い"
+        },
+        {
+            route: "",
+            link: "http://touch.eznavi.auone.jp/transfer/",
+            label: "乗換・地図"
+        },
+        {
+            route: "",
+            link: "https://auone.jp/app/download/&amp;referer=4891",
+            label: "auサービスTOPアプリを見る"
+        },
+        {
+            route: "",
+            link: "https://auone.jp/setting/",
+            label: "各種設定"
+        },
+        {
+            route: "",
+            link: "https://pass.auone.jp/pass_help/?medid=spass_side&amp;srcid=none&amp;serial=smps",
+            label: "ヘルプ"
+        },
+        {
+            route: "",
+            link: "https://pass.auone.jp/inquiry/?medid=spass_side&amp;srcid=none&amp;serial=smps",
+            label: "お問い合わせ"
+        },
+        {
+            route: "",
+            link: "https://pass.auone.jp/terms/?medid=spass_side&amp;srcid=none&amp;serial=smps",
+            label: "利用規約"
+        },
+        {
+            route: "",
+            link: "http://www.kddi.com/corporate/kddi/public/privacy/",
+            label: "プライバシーポリシー"
+        },
+        {
+            route: "",
+            link: "http://www.mediba.jp/privacy/sp/advertising.html",
+            label: "広告について"
+        },
     ];
 
     /**
@@ -226,61 +281,6 @@ export default class SubPageDrawerWidget extends React.Component<SubPageDrawerPr
                                             </li>
                                         })
                                     }
-                                    <li>
-                                        <a href="https://article.auone.jp/flash" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="ニュース">
-                                            <i></i>ニュース
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://tenki.auone.jp/" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="天気">
-                                            <i></i>天気
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://fortune.auone.jp/" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="占い">
-                                            <i></i>占い
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://touch.eznavi.auone.jp/transfer/" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="乗換">
-                                            <i></i>乗換・地図
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://auone.jp/app/download/&amp;referer=4891" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="アプリ版を見る">
-                                            <i></i>auサービスTOPアプリを見る
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://auone.jp/setting/" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="各種設定">
-                                            <i></i>各種設定
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://pass.auone.jp/pass_help/?medid=spass_side&amp;srcid=none&amp;serial=smps" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="ヘルプ">
-                                            <i></i>ヘルプ
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://pass.auone.jp/inquiry/?medid=spass_side&amp;srcid=none&amp;serial=smps" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="お問い合わせ">
-                                            <i></i>お問い合わせ
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://pass.auone.jp/terms/?medid=spass_side&amp;srcid=none&amp;serial=smps" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="利用規約">
-                                            <i></i>利用規約
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.kddi.com/corporate/kddi/public/privacy/" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="プライバシーポリシー">
-                                            <i></i>プライバシーポリシー
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.mediba.jp/privacy/sp/advertising.html" data-ga-category="SmartpassTop" data-ga-action="SideMenu" data-ga-label="広告について">
-                                            <i></i>広告について
-                                        </a>
-                                    </li>
                                 </DrawerContents>
                             </nav>
                         </DrawerModal>

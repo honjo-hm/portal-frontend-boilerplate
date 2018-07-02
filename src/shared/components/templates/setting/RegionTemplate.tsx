@@ -54,6 +54,7 @@ export default class RegionTemplate extends React.Component<RegionProps, RegionS
             route: "settingServices",
             discription: "地域",
             label: this.state.label,
+            useLocation: true
         }; 
 
         return (

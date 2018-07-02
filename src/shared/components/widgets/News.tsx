@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { TabList } from "../parts/news/Tab";
-import { TabPanelList } from "../parts/news/TabPanel";
+import { TabList } from "../parts/tab/Tab";
+import { TabPanelList } from "../parts/tab/TabPanel";
 import Swiper, { SwipeDirection } from "./Swiper";
 
 const tabs = [

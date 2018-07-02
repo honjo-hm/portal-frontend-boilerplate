@@ -56,4 +56,5 @@ const Items = styled.ul`
     text-align: center;
     white-space: nowrap;
     border-bottom: 2px solid #eb5505;
+    z-index: 2;
 `;

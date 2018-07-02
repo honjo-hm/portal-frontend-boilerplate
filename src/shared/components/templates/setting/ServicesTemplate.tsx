@@ -97,30 +97,6 @@ export default class ServicesTemplate extends React.Component<ServicesProps, Set
     }
 
     /**
-     * サイドメニュー表示
-     *
-     * @param e
-     */
-    private onShowSidemenu(e) {
-        document.body.setAttribute("style", "overflow: hidden; height: 100%; width: 100%;");
-        this.setState({showSidemenu: true});
-    }
-
-    /**
-     * サイドメニュー非表示
-     *
-     * @param e
-     */
-    private onHiddenidemenu(e) {
-        document.body.removeAttribute("style");
-        this.setState({showSidemenu: false});
-    }
-
-    /**
-     * 
-     */
-
-    /**
      * render
      */
     public render(): React.ReactNode {
@@ -177,5 +153,25 @@ export default class ServicesTemplate extends React.Component<ServicesProps, Set
                 {/* ↑↑サイドメニュー↑↑ */}
             </div>
         );
+    }
+
+    /**
+     * サイドメニュー表示
+     *
+     * @param e
+     */
+    private onShowSidemenu(e) {
+        document.body.setAttribute("style", "overflow: hidden; height: 100%; width: 100%;");
+        this.setState({showSidemenu: true});
+    }
+
+    /**
+     * サイドメニュー非表示
+     *
+     * @param e
+     */
+    private onHiddenidemenu(e) {
+        document.body.removeAttribute("style");
+        this.setState({showSidemenu: false});
     }
 }

@@ -20,9 +20,16 @@ interface WeatherProps {
 }
 
 /**
+ * state
+ */
+interface WeatherStates {
+    showSidemenu: boolean;
+}
+
+/**
  * module
  */
-export default class WeatherTemplate extends React.Component<WeatherProps, {}> {
+export default class WeatherTemplate extends React.Component<WeatherProps, WeatherStates> {
     /**
      * constructor
      *
@@ -30,6 +37,9 @@ export default class WeatherTemplate extends React.Component<WeatherProps, {}> {
      */
     constructor(props: WeatherProps) {
         super(props);
+        this.state = {
+            showSidemenu: false
+        };
     }
 
     /**
@@ -57,11 +67,31 @@ export default class WeatherTemplate extends React.Component<WeatherProps, {}> {
                     </Setting>
                 </div>
                 {/* ↓↓サイドメニュー↓↓ */}
-                <SubPageDrawerWidget showSidemenu={false} />
-                <SubPageDrawerCoverWidget showSidemenu={false} onClick="" />
-                <SubPageDrawerBottunWidget onClick=""/>
+                <SubPageDrawerWidget showSidemenu={this.state.showSidemenu} />
+                <SubPageDrawerCoverWidget showSidemenu={this.state.showSidemenu} onClick={e => this.onHiddenidemenu(e)} />
+                <SubPageDrawerBottunWidget onClick={e => this.onShowSidemenu(e)} />
                 {/* ↑↑サイドメニュー↑↑ */}
             </div>
         );
+    }
+
+    /**
+     * サイドメニュー表示
+     *
+     * @param e
+     */
+    private onShowSidemenu(e) {
+        document.body.setAttribute("style", "overflow: hidden; height: 100%; width: 100%;");
+        this.setState({showSidemenu: true});
+    }
+
+    /**
+     * サイドメニュー非表示
+     *
+     * @param e
+     */
+    private onHiddenidemenu(e) {
+        document.body.removeAttribute("style");
+        this.setState({showSidemenu: false});
     }
 }

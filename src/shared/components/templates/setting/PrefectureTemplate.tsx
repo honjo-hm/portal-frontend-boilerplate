@@ -21,9 +21,16 @@ interface PrefectureProps {
 }
 
 /**
+ * state
+ */
+interface PrefectureStates {
+    showSidemenu: boolean;
+}
+
+/**
  * module
  */
-export default class PrefectureTemplate extends React.Component<PrefectureProps, {}> {
+export default class PrefectureTemplate extends React.Component<PrefectureProps, PrefectureStates> {
     /**
      * constructor
      *
@@ -31,6 +38,9 @@ export default class PrefectureTemplate extends React.Component<PrefectureProps,
      */
     constructor(props: PrefectureProps) {
         super(props);
+        this.state = {
+            showSidemenu: false
+        };
     }
 
     /**
@@ -52,11 +62,31 @@ export default class PrefectureTemplate extends React.Component<PrefectureProps,
                     </Setting>
                 </div>
                 {/* ↓↓サイドメニュー↓↓ */}
-                <SubPageDrawerWidget showSidemenu={false} />
-                <SubPageDrawerCoverWidget showSidemenu={false} onClick="" />
-                <SubPageDrawerBottunWidget onClick="" />
+                <SubPageDrawerWidget showSidemenu={this.state.showSidemenu} />
+                <SubPageDrawerCoverWidget showSidemenu={this.state.showSidemenu} onClick={e => this.onHiddenidemenu(e)} />
+                <SubPageDrawerBottunWidget onClick={e => this.onShowSidemenu(e)} />
                 {/* ↑↑サイドメニュー↑↑ */}
             </div>
         );
+    }
+
+    /**
+     * サイドメニュー表示
+     *
+     * @param e
+     */
+    private onShowSidemenu(e) {
+        document.body.setAttribute("style", "overflow: hidden; height: 100%; width: 100%;");
+        this.setState({showSidemenu: true});
+    }
+
+    /**
+     * サイドメニュー非表示
+     *
+     * @param e
+     */
+    private onHiddenidemenu(e) {
+        document.body.removeAttribute("style");
+        this.setState({showSidemenu: false});
     }
 }

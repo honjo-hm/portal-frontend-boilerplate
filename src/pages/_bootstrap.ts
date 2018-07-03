@@ -4,7 +4,6 @@
  * @copyright mediba inc.
  * @since 2018.XX.XX
  */
-// import { Container } from "typedi";
 import { GraphQLClient } from "graphql-request";
 import QueryExecutor from "../shared/queries/clients/QueryExecutor";
 

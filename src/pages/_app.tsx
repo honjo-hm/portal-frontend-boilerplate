@@ -7,7 +7,10 @@
  * @since 2018.XX.XX
  * @copyright mediba.inc
  */
+import "./_bootstrap";
 import * as React from "react";
+import { ContainerInitializer } from "../shared/libs/ContainerInitializer";
+import { Container as IocContainer } from "typedi";
 import { Provider } from "react-redux";
 import { Store } from "redux";
 import withRedux from "next-redux-wrapper";
@@ -17,16 +20,18 @@ import { RootState } from "../shared/stores/RootState";
 import { initializeStore } from "../shared/stores/InitializeStore";
 
 /**
- * InjectedStoreProps
+ * InjectedInitialProps
  */
-export interface InjectedStoreProps {
+export interface InjectedInitialProps {
     store: Store<RootState>;
+    iocContainer: IocContainer;
+    nextContext: NextContext;
 }
 
 /**
  * AppProps
  */
-export type AppProps = AppComponentProps & InjectedStoreProps;
+export type AppProps = AppComponentProps & InjectedInitialProps;
 
 /**
  * PortalApp
@@ -39,12 +44,6 @@ export type AppProps = AppComponentProps & InjectedStoreProps;
 export default withRedux(initializeStore)(class PortalApp extends App<AppProps> {
 
     /**
-     * (private)@property NextContext nextContext
-     * だいぶ強引だけど・・・
-     */
-    private static nextContext: NextContext;
-
-    /**
      * サーバーサイド or SPA遷移時初期に呼ばれる
      * Container Componentに共通的に一番最初にばらまくものをここで用意
      *
@@ -54,16 +53,23 @@ export default withRedux(initializeStore)(class PortalApp extends App<AppProps> 
      */
     public static async getInitialProps({ Component, ctx }): Promise<any> {
 
-        // nextのcontextを一旦メンバに持つ
-        // -> request情報を引き回す為の苦肉の策
-        PortalApp.nextContext = ctx as NextContext;
+        // nextjsのcontext
+        const nextContext = ctx as NextContext;
 
+        // typediの初期化
+        const iocContainer: IocContainer = new ContainerInitializer()
+            .prepare("device", "hoge")
+            .prepare("storage", "hoge")
+            .prepare("hoge", "hoge")
+            .load();
+
+        // 子componentのgetInitialProps
         let pageProps = {};
         if (Component.getInitialProps) {
-            pageProps = await Component.getInitialProps(ctx);
+            pageProps = await Component.getInitialProps(nextContext);
         }
 
-        return { pageProps };
+        return { pageProps, iocContainer, nextContext };
     }
 
     /**
@@ -74,12 +80,14 @@ export default withRedux(initializeStore)(class PortalApp extends App<AppProps> 
      */
     public render(): React.ReactNode {
 
-        const { Component, pageProps, store } = this.props;
+        const { Component, pageProps, store, iocContainer, nextContext } = this.props;
 
         return (
             <Container>
                 <Provider store={store}>
-                    <Component {...pageProps} context={PortalApp.nextContext} />
+                    <Component {...pageProps} 
+                        context={nextContext} 
+                        iocContainer={iocContainer} />
                 </Provider>
             </Container>
         );

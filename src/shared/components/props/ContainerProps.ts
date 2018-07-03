@@ -9,6 +9,7 @@
 import { NextContext } from "next";
 import { Dispatch, AnyAction } from "redux";
 import { RootState } from "../../stores/RootState";
+import { Container as IocContainer } from "typedi";
 
 /**
  * Containerのprops
@@ -27,6 +28,11 @@ export interface ContainerProps extends RootState {
      * @var NextContext context
      */
     context: NextContext;
+
+    /**
+     * @var IocContainer container
+     */
+    iocContainer: IocContainer;
 }
 
 /**

@@ -12,10 +12,20 @@ const NewsItem = styled.li`
     box-sizing: border-box;
     vertical-align: top;
     clear: left;
+    overflow: hidden;
+    &.half {
+        width: 50%;
+        ＆:nth-child(odd){
+            float: left;
+        }
+        &:nth-child(even){
+            float: right;
+        }
+    }
 `;
 
 export const NewsDivide = (props) => (
-    <NewsItem>
+    <NewsItem className={props.newsItem.size === 'col2'? "half" : ""}>
         {(() => {
             if (props.newsItem.size === 's') {
                 return <NewsPartsS newsItem={props.newsItem} />;

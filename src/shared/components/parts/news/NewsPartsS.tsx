@@ -19,8 +19,8 @@ const NewsLink = styled.a`
 
 const NewsItemThumbnailSmall = styled.div`
     position: relative;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     box-sizing: border-box;
     border: 1px solid #d8d8d8;
     overflow: hidden;

@@ -10,5 +10,5 @@ const NewsLastupdate = styled.span`
 `;
 
 export const Lastupdate = (props) => (
-    <NewsLastupdate>{props.newsItem}</NewsLastupdate>
+    <NewsLastupdate>{props.newsItem.slice(5, 16).replace('-', '/')}</NewsLastupdate>
 );

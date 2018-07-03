@@ -17,7 +17,7 @@ const NewsLink = styled.a`
     color: #3c3c3c;
 
     .news__items--col2 {
-        width: 50%;
+        width: 100%;
     }
 `;
 

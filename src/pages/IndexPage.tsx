@@ -47,7 +47,12 @@ export default () => (
     <div>
     <IndexTemplate />
         <ul>
-            <Link route="settingServices"><a>settings</a></Link>
+            <li>
+                <Link route="settingServices"><a>settings</a></Link>
+            </li>
+            <li>
+                <Link route="detail"><a>detail</a></Link>
+            </li>
         </ul>
         <div>
             <Dailytool />

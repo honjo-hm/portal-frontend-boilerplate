@@ -13,6 +13,7 @@ import { ContainerInitializer } from "../shared/libs/ContainerInitializer";
 import { Container as IocContainer } from "typedi";
 import { Provider } from "react-redux";
 import { Store } from "redux";
+import { StoreWithThunk } from "redux/store";
 import withRedux from "next-redux-wrapper";
 import { NextContext } from "next";
 import App, { Container, AppComponentProps } from "next/app";
@@ -51,7 +52,7 @@ export default withRedux(initializeStore)(class PortalApp extends App<AppProps> 
      *
      * @returns Promise<any>
      */
-    public static async getInitialProps({ Component, ctx }): Promise<any> {
+    public static async getInitialProps({ Component, ctx }: {Component: any; ctx: NextContext & StoreWithThunk<RootState> }): Promise<any> {
 
         // nextjsのcontext
         const nextContext = ctx as NextContext;

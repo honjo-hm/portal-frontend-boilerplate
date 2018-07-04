@@ -20,7 +20,7 @@ const newsItems = [
         m_filler: "https://stg.portal.st-img.jp/filler/1_1_m.jpg",
         l_thumbnail: "https://stg.portal.st-img.jp/thumb/63d08d1ad6fb2626cecef18c4d4712a6_1529919912_l.jpg",
         l_filler: "https://stg.portal.st-img.jp/filler/1_1_l.jpg",
-        url: "https://stg.article.auone.jp/detail/1/1/1/82_1_r_20180625_1529918061653085",
+        url: "/detail",
         keyword_id: "154",
         keyword_name: "安室奈美恵",
         size: "l"
@@ -42,7 +42,7 @@ const newsItems = [
         m_filler: "https://stg.portal.st-img.jp/filler/5_9_m.jpg",
         l_thumbnail: "https://stg.portal.st-img.jp/thumb/8c1d7c19eda7c30bc203f2ae8d3153dc_1529897783_l.jpg",
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
-        url: "https://stg.article.auone.jp/detail/1/5/9/76_9_r_20180625_1529897783410280",
+        url: "/detail",
         keyword_id: "154",
         keyword_name: "安室奈美恵",
         size: "col2"
@@ -64,7 +64,7 @@ const newsItems = [
         m_filler: "https://stg.portal.st-img.jp/filler/5_9_m.jpg",
         l_thumbnail: "https://stg.portal.st-img.jp/thumb/620ceed04573395feaabc615e4ebf90f_1529987722_l.jpg",
         l_filler: "https://stg.portal.st-img.jp/filler/5_9_l.jpg",
-        url: "https://stg.article.auone.jp/detail/1/5/9/108_9_r_20180625_1529894732062623",
+        url: "/detail",
         keyword_id: "154",
         keyword_name: "安室奈美恵",
         size: "col2"

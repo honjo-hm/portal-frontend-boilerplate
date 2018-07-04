@@ -8,7 +8,8 @@
 import "./_bootstrap";
 import { connect } from "react-redux";
 // import { Store, AnyAction } from "redux";
-// import { RootState } from "../shared/stores/RootState";
+import { StoreWithThunk } from "redux/store";
+import { RootState } from "../shared/stores/RootState";
 import { IndexContainer } from "../shared/components/containers/IndexContainer";
 import { loadedAction } from "../shared/stores/articles/ArticleAction";
 
@@ -25,12 +26,12 @@ export default connect(state => state)(class extends IndexContainer {
      * getInitialProps from next-redux-wrapper
      * 子componentのconstructorより先に呼ばれる
      *
-     * @param Store<RootState> store
+     * @param StoreWithThunk<RootState> store
      * @param boolean isServer
      *
      * @returns Promise<any> props
      */
-    public static async getInitialProps({ store, isServer }: { store; isServer: boolean }) {
+    public static async getInitialProps({ store, isServer }: { store: StoreWithThunk<RootState>; isServer: boolean }) {
 
         console.log(store.getState());
 

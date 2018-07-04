@@ -10,10 +10,11 @@ import styled from "styled-components";
 
 //@ts-ignore
 import { Link } from "../shared/routes/index";
+import IndexTemplate from "../shared/components/templates/IndexTemplate";
 
 /**
  * 以下ちゃんとlibraryとして切り出す
- * 
+ *
 import { GraphQLClient } from "graphql-request";
 
 const client = new GraphQLClient("https://local.api.universal.auone.jp/graphql", {
@@ -40,13 +41,13 @@ client.request(query).then((data) => {
 });
 */
 
-
 export default () => (
     <div>
-        <h2>Hello Index</h2>
+    <IndexTemplate />
         <ul>
             <Link route="settings"><a>settings</a></Link>
         </ul>
     </div>
 )
+
 

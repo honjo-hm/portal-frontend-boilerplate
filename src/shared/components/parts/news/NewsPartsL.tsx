@@ -8,7 +8,6 @@ import { Thumbnail } from "./news_parts/Thumbnail";
 
 const NewsLink = styled.a`
     display: block;
-    padding: 7px 10px 0;
     background-color: #fff;
     text-decoration: none;
     color: #3c3c3c;

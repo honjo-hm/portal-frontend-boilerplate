@@ -13,19 +13,22 @@ const NewsItem = styled.li`
     vertical-align: top;
     clear: left;
     overflow: hidden;
-    &.half {
+    &.news__item--col2 {
         width: 50%;
-        ＆:nth-child(odd){
+        box-sizing: border-box;
+        &:nth-child(odd){
+            padding-right: 5px;
             float: left;
         }
         &:nth-child(even){
+            padding-left: 5px;
             float: right;
         }
     }
 `;
 
 export const NewsDivide = (props) => (
-    <NewsItem className={props.newsItem.size === 'col2'? "half" : ""}>
+    <NewsItem className={props.newsItem.size === 'col2'? "news__item--col2" : ""}>
         {(() => {
             if (props.newsItem.size === 's') {
                 return <NewsPartsS newsItem={props.newsItem} />;

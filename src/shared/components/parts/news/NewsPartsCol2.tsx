@@ -53,6 +53,9 @@ const NewsText = styled.div`
 `;
 
 const NewsSubText = styled.div`
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     line-height: 1.2;
     color: #9e9e9e;
     font-size: 10px;

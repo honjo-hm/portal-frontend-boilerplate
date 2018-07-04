@@ -19,9 +19,9 @@ export default class ServiceStaticWidget extends React.Component<{}, {}> {
         return (
             <SettingContents>
                 <ServiceListTitleParts title="その他設定" />
-                <ServiceLinkStaticParts label="入力補助・検索履歴設定" url="index"/>
-                <ServiceLinkStaticParts label="通知設定方法" url="index"/>
-                <ServiceLinkStaticParts label="マイニュース設定" url="index" link="https://article.auone.jp/keyword/setting"/>
+                <ServiceLinkStaticParts label="入力補助・検索履歴設定" route="index"/>
+                <ServiceLinkStaticParts label="通知設定方法" route="settingSearch"/>
+                <ServiceLinkStaticParts label="マイニュース設定" route="index"/>
             </SettingContents>
         );
     }

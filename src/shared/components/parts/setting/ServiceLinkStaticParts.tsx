@@ -22,7 +22,7 @@ export const ServiceLinkStaticParts = (props) => (
 
             } else {
                 return (
-                    <Link route={props.url}>
+                    <Link route={props.route}>
                         <ServiceLinkAncher>
                             <span>{props.label}</span>
                         </ServiceLinkAncher>

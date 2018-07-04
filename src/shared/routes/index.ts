@@ -41,6 +41,12 @@ router
     pattern: "/setting/weather/regionCode/:regionCode/prefCode/:prefCode",
     page: "/setting/WeatherCityPage"
 })
+// 設定ページ(入力補助・検索履歴)
+.add({
+    name: "settingSearch",
+    pattern: "/setting/search/",
+    page: "/setting/SearchPage"
+})
 // 記事詳細ページ
 .add({
     name: "detail",

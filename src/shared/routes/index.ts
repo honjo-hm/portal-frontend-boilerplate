@@ -1,7 +1,7 @@
 /**
  * routes
  * d.tsが存在しなかったので、中身はJS
- * 
+ *
  * @package Routes
  * @since 2018.XX.XX
  * @copyright mediba.inc

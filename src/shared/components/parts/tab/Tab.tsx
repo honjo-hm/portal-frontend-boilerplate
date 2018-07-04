@@ -8,18 +8,21 @@ export const Tab = (props) => (
 );
 
 export const TabList = (props) => (
-    <Items>
-        {props.tabs.map((tab) => (
-            <Tab key={`Tab${tab.id}`} tab={tab} onClick={props.onClick}>{tab.name}</Tab>
-        ))}
-    </Items>
+    <Nav>
+        <Wrapper>
+            <Items>
+                {props.tabs.map((tab) => (
+                    <Tab key={`Tab${tab.id}`} tab={tab} onClick={props.onClick}>{tab.name}</Tab>
+                ))}
+            </Items>
+        </Wrapper>
+    </Nav>
 );
 
 const Item = styled.li`
     position: relative;
-    flex: 1;
     margin: 0;
-    padding: 0 5px;
+    padding: 0 15px;
     min-height: 44px;
     line-height: 44px;
     &[data-selected='true'] {
@@ -42,18 +45,39 @@ const Item = styled.li`
     &[data-selected='true'] + ::before {
         opacity 0;
     }
+    @media (min-width: 414px) {
+        flex: 1;
+    }
 `;
 
 const Items = styled.ul`
+    display: flex;
+    @media (min-width: 414px) {
+        justify-content: space-around;
+    }
+`;
+
+const Wrapper = styled.div`
+    height: ${44 + 20}px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    max-width: 414px;
+    margin: auto;
+    @media (min-width: 414px) {
+        max-width: 100%;
+    }
+`;
+
+const Nav = styled.nav`
+    height: 44px;
+    overflow-y: hidden;
     position: sticky;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #f6f6f6;
+    z-index: 2;
     font-size: 12px;
     text-align: center;
-    white-space: nowrap;
     border-bottom: 2px solid #eb5505;
+    background-color: #f6f6f6;
 `;

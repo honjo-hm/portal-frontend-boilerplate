@@ -7,36 +7,11 @@
  */
 import React from "react";
 import Document, { Head, Main, NextScript } from "next/document"
-import styled, { ServerStyleSheet, injectGlobal } from "styled-components"
+import { ServerStyleSheet, injectGlobal } from "styled-components"
 import reset from "styled-reset";
 
 injectGlobal`
     ${reset}
-`;
-
-/**
- * style footer
- *
- * @author hoge(hoge@mediba.jp)
- */
-const Footer = styled.footer`
-    font-size: 80%;
-    width: 100%;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #313131;
-`;
-
-/**
- * style address
- *
- * @author hoge(hoge@mediba.jp)
- */
-const Address = styled.address`
-    color: #fff;
-    letter-spacing: 5px;
-    font-style: normal;
 `;
 
 /**
@@ -77,9 +52,6 @@ export default class SiteDocument extends Document {
                 <body>
                     <Main />
                     <NextScript />
-                    <Footer>
-                        <Address>Copyright(C) KDDI/mediba inc.</Address>
-                    </Footer>
                 </body>
             </html>
         )

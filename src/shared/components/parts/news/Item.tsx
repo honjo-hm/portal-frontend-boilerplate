@@ -1,22 +1,23 @@
 import React from "react";
-import {Items, ItemsA, ImgDiv, TextP, TextDiv, TextP2, Omake} from "./ItemSmallStyle";
+import {ItemUl, Items, ItemLink, Img, Title, TextWrap, Sub, CpName} from "./ItemStyle";
 
 
 
 export const Item = (props) => (
-    <ul>
+
+    <ItemUl data-layout={props.layout}>
         {props.roopCounts.map((tab) => (
             <Items data-layout={props.layout}>
-                <ItemsA>
-                    <ImgDiv></ImgDiv>
-                    <TextDiv>
-                        <TextP>台風6号発生 沖縄で大雨の恐れ</TextP>
-                        <TextP2>
-                            <Omake>xxx</Omake>
-                        </TextP2>
-                    </TextDiv>
-                </ItemsA>
+                <ItemLink data-layout={props.layout}>
+                    <Img data-layout={props.layout}></Img>
+                    <TextWrap data-layout={props.layout}>
+                        <Title data-layout={props.layout}>台風6号発生 沖縄で大雨の恐れ</Title>
+                        <Sub data-layout={props.layout}>
+                            <CpName data-layout={props.layout}>xxx</CpName>
+                        </Sub>
+                    </TextWrap>
+                </ItemLink>
             </Items>
         ))}
-    </ul>
+    </ItemUl>
 );

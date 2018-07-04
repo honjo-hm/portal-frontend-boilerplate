@@ -1,7 +1,8 @@
 import React from "react";
-import styled from "styled-components"
-import { TabList } from "./TabList";
-import { TabPanelList } from "./TabPanelList";
+import styled from "styled-components";
+import { TabList } from "../parts/tab/Tab";
+import { TabPanelList } from "../parts/tab/TabPanel";
+import Swiper, { SwipeDirection } from "./Swiper";
 
 const tabs = [
     {
@@ -36,10 +37,6 @@ const tabs = [
     },
 ];
 
-const Section = styled.section`
-    margin-top: 10px;
-`;
-
 interface NewsTabState {
     id: number;
     name: string;
@@ -50,6 +47,9 @@ interface NewsTabsStates {
     tabs: NewsTabState[];
 }
 
+/**
+ * ニュース
+ */
 export default class News extends React.Component<{}, NewsTabsStates> {
     constructor(props) {
         super(props);
@@ -60,10 +60,12 @@ export default class News extends React.Component<{}, NewsTabsStates> {
 
     public render(): React.ReactNode {
         return (
-            <Section className="news">
+            <Item>
                 <TabList tabs={this.state.tabs} onClick={e => this.onClick(e)} />
-                <TabPanelList tabs={this.state.tabs} onSwipe={e => this.onSwipe(e)} />
-            </Section>
+                <Swiper onSwipe={e => this.onSwipe(e)}>
+                    <TabPanelList tabs={this.state.tabs} />
+                </Swiper>
+            </Item>
         );
     }
 
@@ -76,9 +78,9 @@ export default class News extends React.Component<{}, NewsTabsStates> {
             return tab.active;
         });
 
-        // にっこり
+        // まだにっこり( '༥` )
         let i = 0;
-        if (e.direction === 'prev') {
+        if (e.direction === SwipeDirection.PREV) {
             i = index === 0 ? this.state.tabs.length - 1 : index - 1;
         } else {
             i = index === this.state.tabs.length - 1 ? 0 : index + 1;
@@ -92,10 +94,15 @@ export default class News extends React.Component<{}, NewsTabsStates> {
             if (tabIndex !== undefined) {
                 tab.active = tabIndex === index;
             } else {
-                tab.active = tab.id === parseInt(e.target.dataset.tabId, 10);
+                tab.active = tab.id === parseInt(e.currentTarget.dataset.tabId, 10);
             }
             return tab;
         });
         this.setState({ tabs: newTab });
     }
 }
+
+const Item = styled.section`
+    margin-top: 10px;
+    border-top: 1px solid #e9e9e9;
+`;

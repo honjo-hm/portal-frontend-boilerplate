@@ -113,6 +113,14 @@ const displayNone: any = {
     display: "none"
 };
 
+const onClearHistoryButton = (e) => {
+    alert("検索履歴削除");
+};
+
+const onSettingSwitch = (e) => {
+    alert(this);
+};
+
 
 export const SearchButtonParts = () => (
     <form action="" method="">
@@ -121,7 +129,7 @@ export const SearchButtonParts = () => (
                 <SettingSearchText>入力補助</SettingSearchText>
                 <SettingSearchSwitch>
                     <SettingSearchTgl type="checkbox" name="" id="cb1"/>
-                    <SettingSearchTglBtn>
+                    <SettingSearchTglBtn onClick={(e) => onSettingSwitch(e)}>
                         <SettingSearchTglBtnOn>ON</SettingSearchTglBtnOn>
                         <SettingSearchTglBtnOff style={displayNone}>OFF</SettingSearchTglBtnOff>
                     </SettingSearchTglBtn>
@@ -131,14 +139,14 @@ export const SearchButtonParts = () => (
                 <SettingSearchText>検索履歴</SettingSearchText>
                 <SettingSearchSwitch>
                     <SettingSearchTgl type="checkbox" name="" id="cb2"/>
-                    <SettingSearchTglBtn>
+                    <SettingSearchTglBtn onClick={(e) => onSettingSwitch(e)}>
                         <SettingSearchTglBtnOn>ON</SettingSearchTglBtnOn>
                         <SettingSearchTglBtnOff>OFF</SettingSearchTglBtnOff>
                     </SettingSearchTglBtn>
                 </SettingSearchSwitch>
             </li>
         </SettingSearchList>
-        <SettingBtnClear>
+        <SettingBtnClear onClick={(e) => onClearHistoryButton(e)}>
             <p><span>検索履歴の削除</span></p>
         </SettingBtnClear>
     </form>

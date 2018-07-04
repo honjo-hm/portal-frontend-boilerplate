@@ -8,8 +8,10 @@ import { SidemenuLists } from "../parts/SidemenuLists";
 import { SidemenuContents } from "../parts/SidemenuContents";
 import { SidemenuAppBanner } from "../parts/SidemenuAppBanner";
 import { SidemenuFooter } from "../parts/SidemenuFooter";
+import { SidemenuAd } from "../parts/SidemenuAd";
 
 
+// 型定義あとまわしにした残骸
 // interface MyComponentState { isShowing:boolean , isShowed:boolean, isHiding: boolean }
 
 const SidemenuWrapper = styled.div`
@@ -28,7 +30,7 @@ const SidemenuWrapper = styled.div`
 `;
 
 const sidemenuLists = [
-{
+  {
     id: 123456,
     title: 'au Webポータル',
     icon: true,
@@ -461,11 +463,25 @@ const settingMenus = {
     ],
 }
 
+const adTags = [
+  {
+    id: 12345,
+    type: `LARGE`,
+    displayId: 1,
+  },{
+    id: 67890,
+    type: `RECT`,
+    displayId: 2,
+  }
+];
+
+
 export default class SidemenuWidgets extends React.Component<any,any> {
   constructor(props) {
     super(props);
     this.state = {
-      sidemenuLists
+      sidemenuLists,
+      adTags
     }
   }
 
@@ -474,20 +490,20 @@ export default class SidemenuWidgets extends React.Component<any,any> {
     for(let i in this.state.sidemenuLists) {
       sidemenuContents.push(
         <dl key={ this.state.sidemenuLists[i].id }>
-          <SidemenuHead key={ `SidemenuHead` }>{ this.state.sidemenuLists[i].title }</SidemenuHead>
-          <SidemenuLists key={ `SidemenuLists` } menus={ this.state.sidemenuLists[i].menus } />
+          <SidemenuHead>{ this.state.sidemenuLists[i].title }</SidemenuHead>
+          <SidemenuLists menus={ this.state.sidemenuLists[i].menus } />
         </dl>
       )
     }
 
     const settingMenuContents = (
-      <dl key={ Math.random()}>
+      <dl key={ `settingMenuContents--` + Math.random()}>
         <dt>{ settingMenus.title }</dt>
         <dd>
           <ul>
             {
               settingMenus.menus.map((menu, index) => {
-                return <li key={index}>{menu.name}</li>
+                return <li key={index}>{menu.name}</li> // TODO:Parts化
               })
             }
           </ul>
@@ -496,12 +512,13 @@ export default class SidemenuWidgets extends React.Component<any,any> {
     );
 
     return (
-      <SidemenuWrapper key={ `sidemenuWrapper` }>
+      <SidemenuWrapper>
         <div className={this.props.status}>
-          <SidemenuHeader key={`SidemenuHeader`}  onClick={ this.props.onClick }/>
-          <SidemenuContents key={`SidemenuContents`} sidemenuLists={this.state.sidemenuLists}/>
-          <SidemenuAppBanner key={`SidemenuAppBanner`}/>
-          <SidemenuFooter key={`SidemenuFooter`}/>
+          <SidemenuHeader onClick={ this.props.onClick }/>
+          <SidemenuContents sidemenuLists={this.state.sidemenuLists}/>
+          <SidemenuAd sidemenuAdgTags={ adTags[2] } />
+          <SidemenuAppBanner />
+          <SidemenuFooter />
         </div>
         { sidemenuContents }
         { settingMenuContents }

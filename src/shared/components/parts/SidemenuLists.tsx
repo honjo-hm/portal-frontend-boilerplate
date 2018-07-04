@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const SidemenuLists = (props) => {
   const Lists = props.menus.map((menu, index) => {
-    return <li key={ `list` + index }>{ menu.name }</li>
+    return <li key={ `li--` + index }>{ menu.name }</li>
   })
   return(
     <ul>

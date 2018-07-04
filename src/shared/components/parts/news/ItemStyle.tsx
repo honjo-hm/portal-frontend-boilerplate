@@ -13,7 +13,7 @@ export const Items = styled.li`
     &[data-layout='small'] {
         min-height: 56px;
     }
-    &[data-layout='middle'] {
+    &[data-layout='medium'] {
         min-height: 76px;
     }
     &[data-layout='2column'] {
@@ -43,7 +43,7 @@ export const ItemLink = styled.a`
             border: 1px solid #d8d8d8;
         }
     }
-    &[data-layout='middle'] {
+    &[data-layout='medium'] {
         display: -webkit-box;
         display: box;
         -webkit-box-align: center;
@@ -82,7 +82,7 @@ export const Img = styled.div`
         padding-top: 43.33%;
         background-position: center 25%;
     }
-    &[data-layout='middle'] {
+    &[data-layout='medium'] {
         width: 70px;
         height: 70px;
     }
@@ -106,7 +106,7 @@ export const Title = styled.div`
     font-weight: bold;
     overflow: hidden;
     line-height: 1.5;
-    &[data-layout='small'], &[data-layout='middle'] {
+    &[data-layout='small'], &[data-layout='medium'] {
         white-space: nowrap;
         text-overflow: ellipsis;
     }

@@ -1,3 +1,6 @@
+/**
+ * デイリーツール - 占い
+ */
 import React from "react";
 import styled from 'styled-components';
 
@@ -17,7 +20,7 @@ const Rank = styled.span`
     font-weight: 700;
 `;
 
-export const Fortune = (props) => (
+export const FortuneParts = (props) => (
     <FortuneArea>
         <FortuneImg data-astro-code={props.tool.astro_code}/>
         <Rank>{props.tool.rank}位</Rank>

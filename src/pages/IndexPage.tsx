@@ -11,8 +11,7 @@ import styled from "styled-components";
 //@ts-ignore
 import { Link } from "../shared/routes/index";
 import IndexTemplate from "../shared/components/templates/IndexTemplate";
-import Dailytool from "../shared/components/widgets/Dailytool";
-
+import DailytoolWidgets from "../shared/components/widgets/dailytool/DailytoolWidgets";
 
 /**
  * 以下ちゃんとlibraryとして切り出す
@@ -55,7 +54,7 @@ export default () => (
             </li>
         </ul>
         <div>
-            <Dailytool />
+            <DailytoolWidgets />
         </div>
     </div>
 )

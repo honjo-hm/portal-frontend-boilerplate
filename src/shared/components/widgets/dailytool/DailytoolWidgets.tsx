@@ -1,7 +1,11 @@
+/**
+ * デイリーツール
+ */
 import React from "react";
 import styled from "styled-components"
-import { ToolList } from "../parts/dailytool/ToolList";
+import { ToolParts } from "../../parts/dailytool/ToolParts";
 
+// 仮デイリーツールデータ
 const tools = [
     {
         id: 1,
@@ -41,13 +45,21 @@ const Section = styled.section`
     border-top: 1px solid #e9e9e9;
     border-bottom: 1px solid #e9e9e9;
 `;
+const Items = styled.ul`
+     display: -webkit-box;
+     width: 100%;
+`;
 
-export default class Dailytool extends React.Component<{}, {}> {
+export default class DailytoolWidgets extends React.Component<{}, {}> {
 
     public render(): React.ReactNode {
         return (
             <Section>
-                <ToolList tools={tools} />
+                <Items>
+                    {tools.map((tool) => (
+                        <ToolParts key={`Tool${tool.id}`} tool={tool}/>
+                    ))}
+                </Items>
             </Section>
         );
     }

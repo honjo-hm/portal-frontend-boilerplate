@@ -1,3 +1,6 @@
+/**
+ * デイリーツール - 天気
+ */
 import React from "react";
 import styled from 'styled-components';
 
@@ -28,11 +31,12 @@ const Mintemp = styled.span`
     font-weight: 700;
 `;
 
-export const Weather = (props) => (
+export const WeatherParts = (props) => (
     <WeatherArea>
         <Icon>
             <img src={props.tool.icon} width="30" height="20"/>
             {(() => {
+                {/* 警報バッジ付与 */}
                 if (props.tool.alert) {
                   return <AlertImg/>;
                 }

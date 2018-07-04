@@ -1,7 +1,9 @@
-import React from "react";
+/**
+ * デイリーツール - ツール枠
+ */
 import styled from 'styled-components';
-import { Weather } from "./Weather";
-import { Fortune } from "./Fortune";
+import { WeatherParts } from "./WeatherParts";
+import { FortuneParts } from "./FortuneParts";
 
 const Item = styled.li`
     list-style-type: none;
@@ -47,16 +49,19 @@ const Text = styled.p`
     color: #9e9e9e;
 `;
 
-export const Tool = (props) => (
+export const ToolParts = (props) => (
   <Item>
       <Link href={props.tool.link} data-ga-action="Daily" data-ga-label={props.tool.name}>
           <Personal>
               {(() => {
                   if (props.tool.id === 1) {
-                      return <Weather tool={props.tool} />;
+                      {/* 天気 */}
+                      return <WeatherParts tool={props.tool} />;
                   } else if (props.tool.id === 2) {
-                      return <Fortune tool={props.tool} />;
+                      {/* 占い */}
+                      return <FortuneParts tool={props.tool} />;
                   }
+                  {/* 乗換・auサポート */}
                   return <ToolImg data-tool-id={props.tool.id}/>;
               })()}
           </Personal>

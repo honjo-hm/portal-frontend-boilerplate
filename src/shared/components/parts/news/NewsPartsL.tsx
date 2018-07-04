@@ -5,8 +5,10 @@ import { Lastupdate } from "./news_parts/Lastupdate";
 import { ServiceName } from "./news_parts/ServiceName";
 import { Label } from "./news_parts/Label";
 import { Thumbnail } from "./news_parts/Thumbnail";
+//@ts-ignore
+import { Link } from "../../../routes/index";
 
-const NewsLink = styled.a`
+const NewsLink = styled.div`
     display: block;
     background-color: #fff;
     text-decoration: none;
@@ -55,17 +57,22 @@ const NewsSubText = styled.div`
 `;
 
 export const NewsPartsL = (props) => (
-    <NewsLink href={props.newsItem.url}>
-        <NewsItem_thumbnail_laege>
-            <Thumbnail newsItem={props.newsItem.l_thumbnail} />
-        </NewsItem_thumbnail_laege>
-        <NewsText>
-            <Title newsItem={props.newsItem.title} />
-            <NewsSubText>
-                <Label />
-                <Lastupdate newsItem={props.newsItem.updated_date} />
-                <ServiceName newsItem={props.newsItem.credit} />
-            </NewsSubText>
-        </NewsText>
-    </NewsLink>
+  <div>
+      {/* 一旦、Lのみ記事詳細モックに飛ばす */}
+      <Link route='detail'>
+          <NewsLink>
+              <NewsItem_thumbnail_laege>
+                  <Thumbnail newsItem={props.newsItem.l_thumbnail} />
+              </NewsItem_thumbnail_laege>
+              <NewsText>
+                  <Title newsItem={props.newsItem.title} />
+                  <NewsSubText>
+                      <Label />
+                      <Lastupdate newsItem={props.newsItem.updated_date} />
+                      <ServiceName newsItem={props.newsItem.credit} />
+                  </NewsSubText>
+              </NewsText>
+          </NewsLink>
+      </Link>
+  </div>
 );

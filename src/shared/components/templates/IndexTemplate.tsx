@@ -6,7 +6,6 @@ import Banner from "../widgets/Banner";
 import News from "../widgets/News";
 import HeaderWidgets from "../widgets/HeaderWidgets";
 import SidemenuWidgets from "../widgets/SidemenuWidgets";
-import GlobalStyles from '../GlobalStyles'
 
 export default class IndexTemplate extends React.Component<any, any> {
     constructor(props) {
@@ -22,7 +21,6 @@ export default class IndexTemplate extends React.Component<any, any> {
     }
 
     public render(): React.ReactNode {
-        GlobalStyles()
         return (
             <div>
                 <div>

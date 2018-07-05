@@ -12,6 +12,49 @@ import reset from "styled-reset";
 
 injectGlobal`
     ${reset}
+    body {
+        background-color: #fff;
+        color: #3c3c3c;
+        font-family: 'sans-serif';
+        font-size :14px;
+        -webkit-text-size-adjust: 100%;
+         * {
+            word-break: break-word;
+        }
+    }
+    html, body {
+         height: 100%;
+    }
+    input, textarea {
+         font-family: 'sans-serif';
+    }
+    button {
+        font-weight: normal;
+        -webkit-appearance: none;
+    }
+    input[type="search"] {
+        -webkit-appearance: textfield;
+        -webkit-box-sizing: content-box;
+    }
+    input[type="search"]:focus {
+        outline-offset: -2px;
+     }
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+    }
+    a {
+        text-decoration: none;
+        color: #3c3c3c;
+    }
+    a:link,
+    a:hover,
+    a:active {
+        color: #3c3c3c;
+    }
+    a:visited {
+        color: #727272;
+    }`
 `;
 
 /**

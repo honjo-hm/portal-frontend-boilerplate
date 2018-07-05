@@ -18,7 +18,7 @@ const SidemenuAppBannerWrapper = styled.div`
 export const SidemenuAppBanner = () => (
     <SidemenuAppBannerWrapper>
         <div className="sidemenu__app-banner">
-          <a href="https://itunes.apple.com/app/apple-store/id714702585?pt=619251&amp;ct=websm00&amp;mt=8" className="js-analytics" data-ga-action="SideMenu" data-ga-label="auサービスTOPアプリ">auサービスTOPアプリ お得なクーポンやプレゼント、最新ニュースをお届け　詳しく見る</a>
+            <a href="https://itunes.apple.com/app/apple-store/id714702585?pt=619251&amp;ct=websm00&amp;mt=8" className="js-analytics" data-ga-action="SideMenu" data-ga-label="auサービスTOPアプリ">auサービスTOPアプリ お得なクーポンやプレゼント、最新ニュースをお届け　詳しく見る</a>
         </div>
     </SidemenuAppBannerWrapper>
 );

@@ -520,8 +520,6 @@ export default class SidemenuWidgets extends React.Component<any,any> {
           <SidemenuAppBanner />
           <SidemenuFooter />
         </div>
-        { sidemenuContents }
-        { settingMenuContents }
       </SidemenuWrapper>
     );
   }

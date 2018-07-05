@@ -4,8 +4,6 @@ import { NewsDivide } from "./NewsDivide";
 
 const NewsItemsWrapper = styled.ul`
     width: 100%;
-    padding: 0 10px;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 `;
 

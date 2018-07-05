@@ -7,36 +7,54 @@
  */
 import React from "react";
 import Document, { Head, Main, NextScript } from "next/document"
-import styled, { ServerStyleSheet, injectGlobal } from "styled-components"
+import { ServerStyleSheet, injectGlobal } from "styled-components"
 import reset from "styled-reset";
 
 injectGlobal`
     ${reset}
-`;
-
-/**
- * style footer
- *
- * @author hoge(hoge@mediba.jp)
- */
-const Footer = styled.footer`
-    font-size: 80%;
-    width: 100%;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #313131;
-`;
-
-/**
- * style address
- *
- * @author hoge(hoge@mediba.jp)
- */
-const Address = styled.address`
-    color: #fff;
-    letter-spacing: 5px;
-    font-style: normal;
+    body {
+        background-color: #fff;
+        color: #3c3c3c;
+        font-family: 'sans-serif';
+        font-size :14px;
+        -webkit-text-size-adjust: 100%;
+         * {
+            word-break: break-word;
+        }
+    }
+    html, body {
+         height: 100%;
+    }
+    input, textarea {
+         font-family: 'sans-serif';
+    }
+    button {
+        font-weight: normal;
+        -webkit-appearance: none;
+    }
+    input[type="search"] {
+        -webkit-appearance: textfield;
+        -webkit-box-sizing: content-box;
+    }
+    input[type="search"]:focus {
+        outline-offset: -2px;
+     }
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+    }
+    a {
+        text-decoration: none;
+        color: #3c3c3c;
+    }
+    a:link,
+    a:hover,
+    a:active {
+        color: #3c3c3c;
+    }
+    a:visited {
+        color: #727272;
+    }
 `;
 
 /**
@@ -77,9 +95,6 @@ export default class SiteDocument extends Document {
                 <body>
                     <Main />
                     <NextScript />
-                    <Footer>
-                        <Address>Copyright(C) KDDI/mediba inc.</Address>
-                    </Footer>
                 </body>
             </html>
         )

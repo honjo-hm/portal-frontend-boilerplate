@@ -6,7 +6,7 @@
  * @copyright mediba.inc
  */
 import "./bootstrap";
-import IndexTemplate from "../shared/components/templates/IndexTemplate";
+import IndexSpTemplate from "../shared/components/templates/IndexSpTemplate";
 
 /**
  * 以下ちゃんとlibraryとして切り出す
@@ -38,4 +38,4 @@ client.request(query).then((data) => {
 */
 
 
-export default () => <IndexTemplate />;
+export default () => <IndexSpTemplate />;

@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { NewsItems } from "../parts/news/NewsItems";
+import { NewsItems } from "./NewsItems";
+
+
 
 const newsItems = [
     {
@@ -561,24 +563,8 @@ interface NewsListItemState {
     size: string,
 }
 
-interface NewsListItemsState {
-    newsItems: NewsListItemState[];
-}
-
-export default class NewsList extends React.Component<{}, NewsListItemsState> {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            newsItems
-        };
-    }
-
-    public render(): React.ReactNode {
-        return (
-            <NewsItemsFirst>
-                <NewsItems newsItems={this.state.newsItems} />
-            </NewsItemsFirst>
-        );
-    }
-}
+export const NewsList = () => (
+    <NewsItemsFirst>
+        <NewsItems newsItems={newsItems} />
+    </NewsItemsFirst>
+);

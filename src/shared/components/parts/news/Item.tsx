@@ -6,8 +6,8 @@ import {ItemUl, Items, ItemLink, Img, Title, TextWrap, Sub, CpName} from "./Item
 export const Item = (props) => (
 
     <ItemUl data-layout={props.layout}>
-        {props.roopCounts.map((counts) => (
-            <Items data-layout={props.layout}>
+        {props.roopCounts.map((counts, index) => (
+            <Items key={index} data-layout={props.layout}>
                 <ItemLink data-layout={props.layout}>
                     <Img data-layout={props.layout}></Img>
                     <TextWrap data-layout={props.layout}>

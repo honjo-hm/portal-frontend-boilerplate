@@ -23,8 +23,8 @@ export default class HeaderWidgets extends React.Component<any, any> {
     return (
       <Header>
         <div className="header__cover">
-        <ServiceTitle />
-        <SidemenuButton onClick={ this.props.onClick }/>
+            <ServiceTitle />
+            <SidemenuButton onClick={ this.props.onClick }/>
         </div>
       </Header>
     );

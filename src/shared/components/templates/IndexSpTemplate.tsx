@@ -1,5 +1,4 @@
 import React from "react";
-import NewsList from "../widgets/NewsList";
 import DailytoolWidgets from "../widgets/dailytool/DailytoolWidgets";
 import Banner from "../widgets/Banner";
 import News from "../widgets/News";
@@ -30,7 +29,6 @@ export default class IndexSpTemplate extends React.Component<any, any> {
                 <DailytoolWidgets />
                 <Banner />
                 <News />
-                <NewsList />
             </div>
         );
     }

@@ -54,7 +54,7 @@ injectGlobal`
     }
     a:visited {
         color: #727272;
-    }`
+    }
 `;
 
 /**

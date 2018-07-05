@@ -37,5 +37,5 @@ client.request(query).then((data) => {
 });
 */
 
-
 export default () => <IndexSpTemplate />;
+

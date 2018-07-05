@@ -33,7 +33,6 @@ export default class IndexSpTemplate extends React.Component<any, any> {
                 <Banner />
                 <News />
                 <NewsList />
-                
             </div>
         );
     }

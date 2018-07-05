@@ -30,6 +30,9 @@ const ServiceName = styled.span`
 const ServiceLink = styled.p`
     margin-top: 5px;
     text-align: right;
+    a {
+      color: #0574eb;
+    }
     a::after {
         width: 9px;
         height: 15px;
@@ -61,7 +64,7 @@ export const InfoParts = (props) => (
                   <ServiceName>{props.info.cp.name}</ServiceName>
               </SubText>
               <ServiceLink>
-                  <ServiceLinkText href={props.info.url} data-ga-action="Function" data-ga-label="元記事を読む" className="link-text">
+                  <ServiceLinkText href={props.info.url} data-ga-action="Function" data-ga-label="元記事を読む">
                   元記事を読む
                   </ServiceLinkText>
               </ServiceLink>

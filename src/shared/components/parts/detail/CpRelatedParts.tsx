@@ -9,6 +9,9 @@ const Item = styled.li`
     line-height: 1.3;
     margin: 0 10px;
     border-top: 1px solid #f6f6f6;
+    a {
+      color: #0574eb;
+    }
 `;
 const LinkText = styled.a`
     padding-right: 2px;
@@ -21,6 +24,6 @@ const LinkText = styled.a`
 
 export const CpRelatedParts = (props) => (
     <Item>
-        <LinkText href={props.cpItem.link} className="link-text" target="_blank" data-ga-action="関連リンク_CP" data-ga-label={props.cpItem.title}>{props.cpItem.title}</LinkText>
+        <LinkText href={props.cpItem.link} target="_blank" data-ga-action="関連リンク_CP" data-ga-label={props.cpItem.title}>{props.cpItem.title}</LinkText>
     </Item>
 );

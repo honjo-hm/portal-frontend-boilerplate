@@ -13,12 +13,11 @@ import { injectGlobal } from 'styled-components'
 import { Link } from "../shared/routes/index";
 import React from "react";
 import IndexTemplate from "../shared/components/templates/IndexTemplate";
-import DailytoolWidgets from "../shared/components/widgets/dailytool/DailytoolWidgets";
 import IndexSpTemplate from "../shared/components/templates/IndexSpTemplate";
 
 /**
  * 以下ちゃんとlibraryとして切り出す
- *   
+ *
 import { GraphQLClient } from "graphql-request";
 
 const client = new GraphQLClient("https://local.api.universal.auone.jp/graphql", {
@@ -97,7 +96,6 @@ export default () => (
                 <Link route="settingServices"><a>settings</a></Link>
             </li>
         </ul>
-        <DailytoolWidgets />
         <IndexSpTemplate />
     </div>
 )

@@ -51,7 +51,7 @@ router
 .add({
     name: "detail",
     pattern: "/detail/:articleType/:genreId/:subgenreId/:articleId",
-    page: "ArticleDetailPage"
+    page: "/ArticleDetailPage"
 })
 // 汎用エラーはnextjs側でpage作る
 // https://github.com/zeit/next.js#custom-configuration

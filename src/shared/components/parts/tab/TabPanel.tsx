@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Item } from "../news/Item"
 import { NewsList } from "../news/NewsList";
 import { Footer } from "../footer/Footer";
-import { LargeAd } from "../ad/LargeAd";
+import { InfeedAd } from "../ad/InfeedAd";
 
 const roopCountsSmall = [
     {
@@ -50,10 +50,15 @@ const roopCountsMedium = [
     },
 ]
 
+let adCount:number = 0;
+const getCount:Function = () => {
+    return adCount += 1;
+}
+
 export const TabPanel = (props) => (
     <ItemSample hidden={!props.tab.active}>
         <script>console.log(777)</script>
-        <LargeAd adid="35130" targetid={`adg_35130`} displayid="1" adtype="LARGE" />
+        <InfeedAd adid="46965" targetid={`adg_${"46965_" + getCount()}`} displayid="3" adtype="INFEED" />
         <Item layout='large' roopCounts={roopCountsLarge}/>
         <Item layout='2column' roopCounts={roopCounts2column}/>
         <Item layout='medium' roopCounts={roopCountsMedium}/>

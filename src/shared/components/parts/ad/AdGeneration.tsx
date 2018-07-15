@@ -18,10 +18,15 @@ function createUrl(id, targetID, displayid, adType, async = true, tagver = '2.0.
 
 export const AdGeneration = (props) => (
     // Todo: 履歴移動で表示されなくなる
-    <script defer src={createUrl(
-        props.adid,
-        props.targetid,
-        props.displayid,
-        props.adtype,
-    )}></script>
+    <React.Fragment>
+        <script>
+            console.log(999)
+        </script>
+        <script defer src={createUrl(
+            props.adid,
+            props.targetid,
+            props.displayid,
+            props.adtype,
+        )}></script>
+    </React.Fragment>
 );

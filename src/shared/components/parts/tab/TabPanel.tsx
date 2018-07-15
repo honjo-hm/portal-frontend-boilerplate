@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Item } from "../news/Item"
 import { NewsList } from "../news/NewsList";
 import { Footer } from "../footer/Footer";
+import { LargeAd } from "../ad/LargeAd";
 
 const roopCountsSmall = [
     {
@@ -51,6 +52,8 @@ const roopCountsMedium = [
 
 export const TabPanel = (props) => (
     <ItemSample hidden={!props.tab.active}>
+        <script>console.log(777)</script>
+        <LargeAd adid="35130" targetid={`adg_35130`} displayid="1" adtype="LARGE" />
         <Item layout='large' roopCounts={roopCountsLarge}/>
         <Item layout='2column' roopCounts={roopCounts2column}/>
         <Item layout='medium' roopCounts={roopCountsMedium}/>
